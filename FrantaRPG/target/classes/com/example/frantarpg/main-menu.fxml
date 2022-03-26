@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.MainMenu">
+   <children>
+      <ImageView fitHeight="450.0" fitWidth="700.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../img/main-menu-background.jpg" />
+         </image>
+      </ImageView>
+      <Button id="end" layoutX="293.0" layoutY="280.0" mnemonicParsing="false" style="-fx-background-radius: 15px;" text="END" />
+      <Button id="load-game" layoutX="274.0" layoutY="225.0" mnemonicParsing="false" onAction="#LoadGame" style="-fx-background-radius: 15px;" text="Load Game" />
+      <Label id="Title" layoutX="226.0" layoutY="21.0" prefHeight="54.0" prefWidth="271.0" text="Franta RPG " textFill="WHITE">
+         <font>
+            <Font name="Elephant" size="40.0" />
+         </font>
+      </Label>
+      <Button layoutX="287.0" layoutY="130.0" mnemonicParsing="false" onAction="#onNewGameClick" styleClass="button-style" stylesheets="@../../../../java/com/example/frantarpg/style.css" text="Button" />
+   </children>
+</AnchorPane>
