@@ -5,6 +5,7 @@
             -fx-background-position: center center;
         }
         .title{
+            -fx-underline:true;
             -fx-font-family:Elephant;
             -fx-font-size: 40px;
             -fx-text-fill: white;
@@ -17,5 +18,6 @@
             -fx-border: 10px;
             -fx-background-color: Transparent;
             -fx-background-repeat:no-repeat;
-            -fx-border: none;
+            -fx-border-color:white;
+             -fx-border-width: 0 0 3 0;
         }
