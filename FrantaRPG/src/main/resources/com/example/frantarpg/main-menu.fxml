@@ -16,6 +16,6 @@
       <Button id="end" layoutX="293.0" layoutY="280.0" mnemonicParsing="false" styleClass="button-style" stylesheets="@../../../../java/com/example/frantarpg/style.css" text="END" />
       <Button id="load-game" layoutX="274.0" layoutY="225.0" mnemonicParsing="false" onAction="#LoadGame" styleClass="button-style" stylesheets="@../../../../java/com/example/frantarpg/style.css" text="Load Game" />
 
-      <Button layoutX="287.0" layoutY="130.0" mnemonicParsing="false" onAction="#onNewGameClick" styleClass="button-style" stylesheets="@../../../../java/com/example/frantarpg/style.css" text="Button" />
+      <Button layoutX="287.0" layoutY="130.0" mnemonicParsing="false" onAction="#onNewGameClick" styleClass="button-style" stylesheets="@../../../../java/com/example/frantarpg/style.css" text="New Game" />
    </children>
 </AnchorPane>
