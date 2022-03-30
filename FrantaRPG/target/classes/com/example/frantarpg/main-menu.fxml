@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.MainMenu">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.MainMenu">
    <children>
-      <ImageView fitHeight="457.0" fitWidth="706.0" layoutX="-4.0" layoutY="-4.0" pickOnBounds="true">
+      <ImageView fitHeight="450.0" fitWidth="700.0" pickOnBounds="true">
          <image>
-            <Image url="@../../../../java/img/main-menu-background.jpg" />
-         </image>
-      </ImageView>
+            <Image url="file:/C:/Users/frantisek.koci/IdeaProjects/FrantaRPG/FrantaRPG/src/main/java/img/menu.jpg" />
+         </image></ImageView>
 
       <Label layoutX="226.0" layoutY="21.0" prefHeight="54.0" prefWidth="271.0" styleClass="title" stylesheets="@../../../../java/com/example/frantarpg/style.css" text="Franta RPG " />
-      <Button id="end" layoutX="293.0" layoutY="280.0" mnemonicParsing="false" styleClass="button-style" stylesheets="@../../../../java/com/example/frantarpg/style.css" text="END" />
-      <Button id="load-game" layoutX="274.0" layoutY="225.0" mnemonicParsing="false" onAction="#LoadGame" styleClass="button-style" stylesheets="@../../../../java/com/example/frantarpg/style.css" text="Load Game" />
+      <Button id="end" layoutX="316.0" layoutY="275.0" mnemonicParsing="false" styleClass="button-style" stylesheets="@../../../../java/com/example/frantarpg/style.css" text="END">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Button id="load-game" layoutX="286.0" layoutY="203.0" mnemonicParsing="false" onAction="#LoadGame" styleClass="button-style" stylesheets="@../../../../java/com/example/frantarpg/style.css" text="Load Game">
+         <effect>
+            <DropShadow />
+         </effect></Button>
 
-      <Button layoutX="287.0" layoutY="130.0" mnemonicParsing="false" onAction="#onNewGameClick" styleClass="button-style" stylesheets="@../../../../java/com/example/frantarpg/style.css" text="New Game" />
+      <Button fx:id="NewGameButton" layoutX="288.0" layoutY="130.0" mnemonicParsing="false" onAction="#onNewGameClick" onMousePressed="#AnimationStart" onMouseReleased="#AnimationEnd" styleClass="button-style" stylesheets="@../../../../java/com/example/frantarpg/style.css" text="New Game">
+         <effect>
+            <DropShadow />
+         </effect></Button>
    </children>
 </AnchorPane>

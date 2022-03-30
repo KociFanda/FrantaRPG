@@ -1,6 +1,6 @@
 
         .menu-background{
-            -fx-background-image: url("../../../../../img/main-menu-background.jpg");
+            -fx-background-image: url(menu.jpg);
             -fx-background-repeat: stretch;
             -fx-background-position: center center;
         }
@@ -11,6 +11,7 @@
             -fx-text-fill: white;
             -fx-stroke: firebrick;
             -fx-stroke-width: 2px;
+            -fx-underline: true;
         }
         .button-style{
             -fx-text-fill:white;
@@ -19,5 +20,5 @@
             -fx-background-color: Transparent;
             -fx-background-repeat:no-repeat;
             -fx-border-color:white;
-             -fx-border-width: 0 0 3 0;
+            /*-fx-border-width: 0 0 3 0;*/
         }
