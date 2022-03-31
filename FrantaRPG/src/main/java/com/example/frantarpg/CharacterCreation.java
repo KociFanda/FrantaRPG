@@ -22,4 +22,5 @@ public class CharacterCreation {
         stage.setScene(scene);
         stage.show();
     }
+
 }

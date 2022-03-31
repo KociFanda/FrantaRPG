@@ -7,6 +7,37 @@ public class Player{
     private int hp;
     private int gold;
 
+    //attributes
+    private int strength;
+    private int inteligence;
+
+    public int getStrength() {
+        return strength;
+    }
+
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
+    public int getInteligence() {
+        return inteligence;
+    }
+
+    public void setInteligence(int inteligence) {
+        this.inteligence = inteligence;
+    }
+
+
+    public Player(String name, int dmg, int hp, int gold, int strength, int inteligence) {
+        this.name = name;
+        this.dmg = dmg;
+        this.hp = hp;
+        this.gold = gold;
+        this.strength = strength;
+        this.inteligence = inteligence;
+    }
+
+
     public Player(String name) {
         this.name = name;
     }

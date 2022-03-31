@@ -9,16 +9,22 @@
    <children>
       <ImageView fitHeight="457.0" fitWidth="700.0" pickOnBounds="true">
          <image>
-            <Image url="file:/C:/Users/frantisek.koci/IdeaProjects/FrantaRPG/FrantaRPG/src/main/java/img/character-creation-background.png" />
+            <Image url="@/character-creation-background.png" />
          </image></ImageView>
-      <Label layoutX="144.0" layoutY="14.0" prefHeight="50.0" prefWidth="413.0" styleClass="title" stylesheets="@../../../../java/com/example/frantarpg/style.css" text="Character Creation" textAlignment="CENTER" textFill="WHITE">
+      <Label layoutX="143.0" layoutY="14.0" prefHeight="36.0" prefWidth="414.0" styleClass="title" stylesheets="@/style.css" text="Character Creation" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="19.0" />
          </font></Label>
       <ImageView fitHeight="141.0" fitWidth="107.0" layoutX="8.0" layoutY="380.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="file:/C:/Users/frantisek.koci/IdeaProjects/FrantaRPG/FrantaRPG/src/main/java/img/fuckgoback.jpg" />
+            <Image url="@/fuckgoback.jpg" />
          </image>
       </ImageView>
+      <TextField fx:id="playerName" layoutX="90.0" layoutY="121.0" prefHeight="36.0" prefWidth="162.0" promptText="Enter your name:" />
+      <Label layoutX="69.0" layoutY="84.0" styleClass="title2" stylesheets="@/style.css" text="What is your name ?" />
+      <Button layoutX="581.0" layoutY="383.0" mnemonicParsing="false" styleClass="button-style" stylesheets="@/style.css" text="Create" />
+      <RadioButton layoutX="26.0" layoutY="248.0" mnemonicParsing="false" styleClass="title2" stylesheets="@/style.css" text="CLASS A" />
+      <RadioButton layoutX="226.0" layoutY="248.0" mnemonicParsing="false" styleClass="title2" stylesheets="@/style.css" text="CLASS B" />
+      <RadioButton layoutX="396.0" layoutY="248.0" mnemonicParsing="false" styleClass="title2" stylesheets="@/style.css" text="CLASS C" />
    </children>
 </AnchorPane>
