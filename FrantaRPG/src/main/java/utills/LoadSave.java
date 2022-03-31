@@ -7,7 +7,7 @@ import java.io.FileReader;
 public class LoadSave {
     public static void load(){
         try {
-            BufferedReader br = new BufferedReader(new FileReader("src/main/java/utills/save.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("FrantaRPG/src/main/java/utills/save.txt"));
             Player player = new Player("testNamdsadasdasdasdasdasdas");
             player.setName(br.readLine());
             player.setHp(Integer.parseInt(br.readLine()));

@@ -1,5 +1,6 @@
 package com.example.frantarpg;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -35,6 +36,10 @@ public class MainMenu {
         utills.LoadSave.load();
     }
 
+    public void END(ActionEvent actionEvent) {
+        Platform.exit();
+    }
+/*
     private double baseHeight;
     private double baseWidht;
     public void AnimationStart(MouseEvent mouseEvent) {
@@ -53,6 +58,7 @@ public class MainMenu {
         this.baseWidht  = baseWidht;
 
         button.setMaxHeight(baseHeight);
-        button.setMaxWidth(baseWidht);
-   }
+       button.setMaxWidth(baseWidht);
+       }
+       */
 }

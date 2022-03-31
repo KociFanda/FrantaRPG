@@ -7,13 +7,13 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.MainMenu">
    <children>
-      <ImageView fitHeight="450.0" fitWidth="700.0" pickOnBounds="true">
+      <ImageView fitHeight="464.0" fitWidth="700.0" pickOnBounds="true">
          <image>
-            <Image url="file:/C:/Users/frantisek.koci/IdeaProjects/FrantaRPG/FrantaRPG/src/main/java/img/menu.jpg" />
+            <Image url="file:/C:/Users/frantisek.koci/IdeaProjects/FrantaRPG/FrantaRPG/src/main/java/img/main-menu.jpg" />
          </image></ImageView>
 
       <Label layoutX="226.0" layoutY="21.0" prefHeight="54.0" prefWidth="271.0" styleClass="title" stylesheets="@../../../../java/com/example/frantarpg/style.css" text="Franta RPG " />
-      <Button id="end" layoutX="316.0" layoutY="275.0" mnemonicParsing="false" styleClass="button-style" stylesheets="@../../../../java/com/example/frantarpg/style.css" text="END">
+      <Button id="end" layoutX="316.0" layoutY="275.0" mnemonicParsing="false" onAction="#END" styleClass="button-style" stylesheets="@../../../../java/com/example/frantarpg/style.css" text="END">
          <effect>
             <DropShadow />
          </effect></Button>
@@ -22,7 +22,7 @@
             <DropShadow />
          </effect></Button>
 
-      <Button fx:id="NewGameButton" layoutX="288.0" layoutY="130.0" mnemonicParsing="false" onAction="#onNewGameClick" onMousePressed="#AnimationStart" onMouseReleased="#AnimationEnd" styleClass="button-style" stylesheets="@../../../../java/com/example/frantarpg/style.css" text="New Game">
+      <Button fx:id="NewGameButton" layoutX="288.0" layoutY="130.0" mnemonicParsing="false" onAction="#onNewGameClick" styleClass="button-style" stylesheets="@../../../../java/com/example/frantarpg/style.css" text="New Game">
          <effect>
             <DropShadow />
          </effect></Button>

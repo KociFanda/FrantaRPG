@@ -7,7 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.CharacterCreation">
    <children>
-      <ImageView fitHeight="450.0" fitWidth="700.0" pickOnBounds="true">
+      <ImageView fitHeight="457.0" fitWidth="700.0" pickOnBounds="true">
          <image>
             <Image url="file:/C:/Users/frantisek.koci/IdeaProjects/FrantaRPG/FrantaRPG/src/main/java/img/character-creation-background.png" />
          </image></ImageView>
@@ -15,9 +15,9 @@
          <font>
             <Font size="19.0" />
          </font></Label>
-      <ImageView fitHeight="60.0" fitWidth="88.0" layoutX="14.0" layoutY="376.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="141.0" fitWidth="107.0" layoutX="8.0" layoutY="380.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="file:/C:/Users/frantisek.koci/IdeaProjects/FrantaRPG/FrantaRPG/src/main/java/img/FuckGoBack.png" />
+            <Image url="file:/C:/Users/frantisek.koci/IdeaProjects/FrantaRPG/FrantaRPG/src/main/java/img/fuckgoback.jpg" />
          </image>
       </ImageView>
    </children>
