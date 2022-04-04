@@ -1,8 +1,7 @@
 
         .menu-background{
-            -fx-background-image: url("../../../../../img/main-menu-background.jpg");
-            -fx-background-repeat: stretch;
-            -fx-background-position: center center;
+            -fx-background-color: black;
+            -fx-content-display:center;
         }
         .title{
             -fx-font-family:Elephant;

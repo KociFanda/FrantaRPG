@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import utills.LoadSave;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class MainMenu {
     public Button NewGameButton;

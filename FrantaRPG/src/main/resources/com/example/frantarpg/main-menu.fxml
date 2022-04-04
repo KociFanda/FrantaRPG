@@ -5,15 +5,19 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.MainMenu">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-position: ´;" styleClass="menu-background" stylesheets="@/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.MainMenu">
    <children>
-      <ImageView fitHeight="464.0" fitWidth="700.0" pickOnBounds="true">
-         <image>
-            <Image url="@/main-menu.jpg" />
-         </image>
-      </ImageView>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <ImageView pickOnBounds="true" preserveRatio="true" x="400.0" y="400.0" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@/main-menu.jpg" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
 
-      <Label layoutX="226.0" layoutY="21.0" prefHeight="54.0" prefWidth="271.0" styleClass="title" stylesheets="@/style.css" text="Franta RPG " />
+            <Label layoutX="226.0" layoutY="19.0" prefHeight="61.0" prefWidth="277.0" styleClass="title" stylesheets="@/style.css" text="Franta RPG " />
       <Button id="end" layoutX="316.0" layoutY="275.0" mnemonicParsing="false" onAction="#END" styleClass="button-style" stylesheets="@/style.css" text="END">
          <effect>
             <DropShadow />
