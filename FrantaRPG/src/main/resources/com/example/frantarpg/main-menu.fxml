@@ -1,35 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-position: ´;" styleClass="menu-background" stylesheets="@/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.MainMenu">
+<AnchorPane fx:id="mainLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.MainMenu">
+
    <children>
-      <BorderPane prefHeight="200.0" prefWidth="200.0">
-         <center>
-            <ImageView pickOnBounds="true" preserveRatio="true" x="400.0" y="400.0" BorderPane.alignment="CENTER">
-               <image>
-                  <Image url="@/main-menu.jpg" />
-               </image>
-            </ImageView>
-         </center>
-      </BorderPane>
 
-            <Label layoutX="226.0" layoutY="19.0" prefHeight="61.0" prefWidth="277.0" styleClass="title" stylesheets="@/style.css" text="Franta RPG " />
-      <Button id="end" layoutX="316.0" layoutY="275.0" mnemonicParsing="false" onAction="#END" styleClass="button-style" stylesheets="@/style.css" text="END">
-         <effect>
-            <DropShadow />
-         </effect></Button>
-      <Button id="load-game" layoutX="286.0" layoutY="203.0" mnemonicParsing="false" onAction="#LoadGame" styleClass="button-style" stylesheets="@/style.css" text="Load Game">
-         <effect>
-            <DropShadow />
-         </effect></Button>
+      <ImageView fx:id="imageView" fitHeight="480.0" fitWidth="720.0" layoutX="-406.0" layoutY="-413.0" pickOnBounds="true" x="400.0" y="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@/main-menu.jpg" />
+         </image>
+      </ImageView>
 
-      <Button fx:id="NewGameButton" layoutX="288.0" layoutY="130.0" mnemonicParsing="false" onAction="#onNewGameClick" styleClass="button-style" stylesheets="@/style.css" text="New Game">
-         <effect>
-            <DropShadow />
-         </effect></Button>
+      <StackPane layoutX="-2.0" prefHeight="92.0" prefWidth="720.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label prefHeight="62.0" prefWidth="273.0" styleClass="title" stylesheets="@/style.css" text="Franta RPG " />
+         </children>
+      </StackPane>
+
+      <StackPane layoutX="1.0" layoutY="300.0" prefHeight="100.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button mnemonicParsing="false" styleClass="button-style" stylesheets="@../../../style.css" text="Credits" />
+         </children>
+      </StackPane>
+
+      <StackPane layoutX="6.0" layoutY="278.0" prefHeight="100.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="380.0">
+         <children>
+            <Button id="end" mnemonicParsing="false" onAction="#END" styleClass="button-style" stylesheets="@/style.css" text="END" />
+         </children>
+      </StackPane>
+
+      <StackPane layoutX="1.0" layoutY="214.0" prefHeight="100.0" prefWidth="720.0" scaleShape="false">
+         <children>
+            <Button mnemonicParsing="false" styleClass="button-style" stylesheets="@../../../style.css" text="Load game" />
+         </children>
+      </StackPane>
+
+      <StackPane layoutX="1.0" layoutY="140.0" prefHeight="100.0" prefWidth="720.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="160.0" styleClass="button-style" stylesheets="@../../../style.css" text="New Game" />
+         </children>
+      </StackPane>
+
    </children>
 </AnchorPane>

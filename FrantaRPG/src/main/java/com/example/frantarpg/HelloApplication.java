@@ -14,9 +14,11 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
 
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("main-menu.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 700, 450);
+        Scene scene = new Scene(fxmlLoader.load(), 720, 480);
         stage.setTitle("Main menu");
         stage.setScene(scene);
+        stage.setMinHeight(480);
+        stage.setMinWidth(720);
         stage.show();
     }
 

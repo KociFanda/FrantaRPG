@@ -4,20 +4,26 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import utills.LoadSave;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ResourceBundle;
 
-public class MainMenu {
+public class MainMenu implements Initializable {
     public Button NewGameButton;
+    public AnchorPane mainLayout;
+    public ImageView imageView;
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -39,6 +45,12 @@ public class MainMenu {
 
     public void END(ActionEvent actionEvent) {
         Platform.exit();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        imageView.fitWidthProperty().bind(mainLayout.widthProperty());
+        imageView.fitHeightProperty().bind(mainLayout.heightProperty());
     }
 /*
     private double baseHeight;
