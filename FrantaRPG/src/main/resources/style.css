@@ -5,18 +5,20 @@
         }
         .title{
             -fx-font-family:Elephant;
-            -fx-font-size: 40px;
+            -fx-font-size: 60px;
             -fx-text-fill: white;
             -fx-stroke: firebrick;
             -fx-stroke-width: 2px;
+
         }
         .button-style{
             -fx-text-fill:white;
-            -fx-font-size:20px ;
+            -fx-font-size:30px ;
             -fx-border: 10px;
             -fx-background-color: Transparent;
             -fx-background-repeat:no-repeat;
             -fx-border: none;
+
         }
         .title2{
             -fx-font-family:Elephant;
