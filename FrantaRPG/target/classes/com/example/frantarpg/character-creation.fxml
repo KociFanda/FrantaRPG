@@ -1,30 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.CharacterCreation">
+<AnchorPane fx:id="mainLayout" focusTraversable="true" prefHeight="580.0" prefWidth="820.0" styleClass="character-creation-background" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.CharacterCreation">
    <children>
-      <ImageView fitHeight="457.0" fitWidth="700.0" pickOnBounds="true">
+      <ImageView fx:id="imageView" fitHeight="580.0" fitWidth="820.0" nodeOrientation="INHERIT" pickOnBounds="true" smooth="false">
          <image>
-            <Image url="@/character-creation-background.png" />
-         </image></ImageView>
-      <Label layoutX="143.0" layoutY="14.0" prefHeight="36.0" prefWidth="414.0" styleClass="title" stylesheets="@/style.css" text="Character Creation" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font size="19.0" />
-         </font></Label>
-      <ImageView fitHeight="141.0" fitWidth="107.0" layoutX="8.0" layoutY="380.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@/fuckgoback.jpg" />
+            <Image url="@../../../pillars.png" />
          </image>
-      </ImageView>
-      <TextField fx:id="playerName" layoutX="90.0" layoutY="121.0" prefHeight="36.0" prefWidth="162.0" promptText="Enter your name:" />
-      <Label layoutX="69.0" layoutY="84.0" styleClass="title2" stylesheets="@/style.css" text="What is your name ?" />
-      <Button layoutX="581.0" layoutY="383.0" mnemonicParsing="false" styleClass="button-style" stylesheets="@/style.css" text="Create" />
-      <RadioButton layoutX="26.0" layoutY="248.0" mnemonicParsing="false" styleClass="title2" stylesheets="@/style.css" text="CLASS A" />
-      <RadioButton layoutX="226.0" layoutY="248.0" mnemonicParsing="false" styleClass="title2" stylesheets="@/style.css" text="CLASS B" />
-      <RadioButton layoutX="396.0" layoutY="248.0" mnemonicParsing="false" styleClass="title2" stylesheets="@/style.css" text="CLASS C" />
+        </ImageView>
+      <StackPane layoutY="97.0" prefHeight="72.0" prefWidth="820.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
+         <children>
+            <Label prefHeight="57.0" prefWidth="444.0" styleClass="title2" stylesheets="@../../../style.css" text="Character Creation">
+            <effect>
+               <DropShadow spread="0.9" />
+            </effect>
+         </Label>
+         </children>
+      </StackPane>
+      <TextField layoutX="104.0" layoutY="201.0" prefHeight="47.0" prefWidth="212.0">
+         <effect>
+            <InnerShadow choke="0.4" />
+         </effect>
+      </TextField>
+      <MenuButton layoutX="460.0" layoutY="212.0" mnemonicParsing="false" text="Class">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <Label layoutX="116.0" layoutY="171.0" text="Enter character name" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow spread="0.4" />
+         </effect>
+      </Label>
    </children>
 </AnchorPane>

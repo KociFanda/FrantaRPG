@@ -1,7 +1,6 @@
 
-        .menu-background{
-            -fx-background-color: black;
-            -fx-content-display:center;
+        .character-creation-background{
+            -fx-background-color: #454545;
         }
         .title{
             -fx-font-family:Elephant;
@@ -13,16 +12,30 @@
         }
         .button-style{
             -fx-text-fill:white;
-            -fx-font-size:30px ;
+            -fx-font-size:35px ;
             -fx-border: 10px;
-            -fx-background-color: Transparent;
+            -fx-background-color: transparent;
             -fx-background-repeat:no-repeat;
             -fx-border: none;
-
+        }
+        .button-style-character-creation{
+            -fx-text-fill:white;
+            -fx-font-size:35px ;
+            -fx-border: 10px;
+            -fx-background-color: transparent;
+            -fx-background-repeat:no-repeat;
+            -fx-border: black solid 2px;
         }
         .title2{
             -fx-font-family:Elephant;
-            -fx-font-size: 20px;
+            -fx-font-size: 45px;
+            -fx-text-fill: white;
+            -fx-stroke: firebrick;
+            -fx-stroke-width: 2px;
+        }
+        .title3{
+            -fx-font-family:Elephant;
+            -fx-font-size: 30px;
             -fx-text-fill: white;
             -fx-stroke: firebrick;
             -fx-stroke-width: 2px;

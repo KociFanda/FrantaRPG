@@ -7,53 +7,50 @@
 
 <AnchorPane fx:id="mainLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.MainMenu">
 
-   <children>
+   <ImageView fx:id="imageView" fitHeight="490.0" fitWidth="729.0" pickOnBounds="true" BorderPane.alignment="CENTER">
+      <Image url="@/main-menu.jpg" />
+   </ImageView>
 
-      <ImageView fx:id="imageView" fitHeight="480.0" fitWidth="720.0" layoutX="-406.0" layoutY="-400.0" pickOnBounds="true" x="400.0" y="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" BorderPane.alignment="CENTER">
-         <image>
-            <Image url="@/main-menu.jpg" />
-         </image>
-      </ImageView>
-      <StackPane prefHeight="99.0" prefWidth="720.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Label prefHeight="99.0" prefWidth="397.0" styleClass="title" stylesheets="@../../../style.css" text="Franta RPG">
-               <effect>
-                  <DropShadow spread="0.9" />
-               </effect></Label>
-         </children>
-      </StackPane>
-      <StackPane layoutY="121.0" prefHeight="90.0" prefWidth="720.0" AnchorPane.bottomAnchor="269.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="121.0">
-         <children>
-            <Button mnemonicParsing="false" onAction="#onNewGameClick" prefHeight="93.0" prefWidth="214.0" styleClass="button-style" stylesheets="@../../../style.css" text="New Game">
-               <effect>
-                  <DropShadow height="38.55" radius="22.479999999999997" spread="0.76" width="53.37" />
-               </effect></Button>
-         </children>
-      </StackPane>
-      <StackPane layoutY="211.0" prefHeight="90.0" prefWidth="720.0" AnchorPane.bottomAnchor="178.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="212.0">
-         <children>
-            <Button mnemonicParsing="false" onAction="#LoadGame" prefHeight="94.0" prefWidth="232.0" styleClass="button-style" stylesheets="@../../../style.css" text="Load Game">
-               <effect>
-                  <DropShadow height="53.37" radius="23.9625" spread="0.76" width="44.48" />
-               </effect></Button>
-         </children>
-      </StackPane>
-      <StackPane layoutX="4.0" layoutY="301.0" prefHeight="90.0" prefWidth="720.0" AnchorPane.bottomAnchor="79.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="311.0">
-         <children>
-            <Button mnemonicParsing="false" prefHeight="94.0" prefWidth="176.0" styleClass="button-style" stylesheets="@../../../style.css" text="Credits">
-               <effect>
-                  <DropShadow height="44.48" radius="18.775" spread="0.77" width="32.62" />
-               </effect></Button>
-         </children>
-      </StackPane>
-      <StackPane layoutY="390.0" prefHeight="90.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="390.0">
-         <children>
-            <Button mnemonicParsing="false" onAction="#END" prefHeight="88.0" prefWidth="139.0" styleClass="button-style" stylesheets="@../../../style.css" text="End">
-               <effect>
-                  <DropShadow height="50.41" radius="21.74" spread="0.38" width="38.55" />
-               </effect></Button>
-         </children>
-      </StackPane>
+   <StackPane prefHeight="99.0" prefWidth="720.0" AnchorPane.bottomAnchor="381.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label prefHeight="99.0" prefWidth="397.0" styleClass="title" stylesheets="@../../../style.css" text="Franta RPG">
+         <effect>
+            <DropShadow spread="0.9"/>
+         </effect>
+      </Label>
+   </StackPane>
+   <VBox alignment="CENTER" layoutX="190.0" layoutY="134.0" prefHeight="265.0" prefWidth="350.0"
+         AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="180.0"
+         AnchorPane.topAnchor="134.0">
+      <Button mnemonicParsing="false" onAction="#onNewGameClick" styleClass="button-style"
+              stylesheets="@../../../style.css" text="New Game">
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" spread="0.9"/>
+         </effect>
+      </Button>
 
-   </children>
+      <Button cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false"
+              graphicTextGap="0.0" mnemonicParsing="false" onAction="#LoadGame" scaleShape="false"
+              styleClass="button-style" stylesheets="@../../../style.css" text="Load Game" textAlignment="JUSTIFY">
+      <effect>
+         <DropShadow blurType="TWO_PASS_BOX" spread="0.9"/>
+      </effect>
+   </Button>
+
+      <Button mnemonicParsing="false" onAction="#Credits" styleClass="button-style" stylesheets="@../../../style.css"
+              text="Credits">
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" spread="0.9"/>
+         </effect>
+      </Button>
+
+      <Button cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false"
+              graphicTextGap="0.0" mnemonicParsing="false" onAction="#END" scaleShape="false" styleClass="button-style"
+              stylesheets="@../../../style.css" text="End" textAlignment="JUSTIFY">
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" spread="0.9"/>
+         </effect>
+      </Button>
+   </VBox>
+
 </AnchorPane>
