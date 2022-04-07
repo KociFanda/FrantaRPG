@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
@@ -29,8 +30,9 @@
       </TextField>
       <MenuButton alignment="CENTER" layoutX="460.0" layoutY="212.0" minHeight="25.0" mnemonicParsing="false" prefWidth="100.0" text="Class">
         <items>
-          <MenuItem mnemonicParsing="false" text="Tyler1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
+          <MenuItem mnemonicParsing="false" onAction="#tyler1Choosen" text="Tyler1" />
+          <MenuItem mnemonicParsing="false" onAction="#MageChoosen" text="Mage" />
+           <MenuItem mnemonicParsing="false" onAction="#ArcherChoosen" text="Archer" />
         </items>
       </MenuButton>
       <Label layoutX="116.0" layoutY="171.0" text="Enter character name" textFill="WHITE">
@@ -41,5 +43,34 @@
             <DropShadow spread="0.4" />
          </effect>
       </Label>
+      <ImageView fitHeight="57.0" fitWidth="100.0" layoutX="98.0" layoutY="509.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../arrow-back.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="116.0" layoutY="496.0" text="Back" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" spread="0.11" />
+         </effect>
+      </Label>
+      <ImageView fitHeight="240.0" fitWidth="280.0" layoutX="99.0" layoutY="255.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../frame-character-creation.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="560.0" layoutY="485.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="159.0" styleClass="button-style" stylesheets="@../../../style.css" text="Create">
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" spread="0.74" />
+         </effect>
+      </Button>
+      <TextArea fx:id="classInfo" layoutX="433.0" layoutY="248.0" prefHeight="200.0" prefWidth="200.0" />
+      <ImageView fx:id="characterMainImage" fitHeight="196.0" fitWidth="219.0" layoutX="129.0" layoutY="277.0" pickOnBounds="true">
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
    </children>
 </AnchorPane>
