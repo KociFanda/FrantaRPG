@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mainLayout" focusTraversable="true" prefHeight="580.0" prefWidth="820.0" styleClass="character-creation-background" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.CharacterCreation">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="580.0" fitWidth="820.0" nodeOrientation="INHERIT" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../../pillars.png" />
+         </image>
+        </ImageView>
+      <StackPane layoutY="97.0" prefHeight="72.0" prefWidth="820.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
+         <children>
+            <Label prefHeight="57.0" prefWidth="444.0" styleClass="title2" stylesheets="@../../../style.css" text="Character Creation">
+            <effect>
+               <DropShadow spread="0.9" />
+            </effect>
+         </Label>
+         </children>
+      </StackPane>
+      <TextField layoutX="104.0" layoutY="201.0" prefHeight="47.0" prefWidth="212.0">
+         <effect>
+            <InnerShadow choke="0.4" />
+         </effect>
+      </TextField>
+      <MenuButton alignment="CENTER" layoutX="460.0" layoutY="212.0" minHeight="25.0" mnemonicParsing="false" prefWidth="100.0" text="Class">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Tyler1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <Label layoutX="116.0" layoutY="171.0" text="Enter character name" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow spread="0.4" />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>
