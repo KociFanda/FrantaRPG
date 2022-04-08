@@ -20,7 +20,9 @@ import java.util.ResourceBundle;
 
 public class CharacterCreation implements Initializable {
     public TextArea classInfo;
-    public ImageView characterMainImage;
+    public ImageView characterMainImageTyler;
+    public ImageView characterMainImageArcher;
+    public ImageView characterMainImageMage;
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -28,10 +30,12 @@ public class CharacterCreation implements Initializable {
     public ImageView imageView;
 
 public void tyler1Choosen(ActionEvent event){
-        File file = new File("src/main/java/playable-classes/tyler1/tyler1-main-image.jpg");
+       /* File file = new File("src/main/resources/img/tyler1-main-image.jpg");
         Image image = new Image(file.toURI().toString());
-        characterMainImage.setImage(image);
-
+        characterMainImage.setImage(image); */
+   characterMainImageTyler.setVisible(true);
+characterMainImageArcher.setVisible(false);
+characterMainImageMage.setVisible(false);
    classInfo.setText(
            "Class name:Tyler1\n" +
            "HP:150\n" +
@@ -42,10 +46,9 @@ public void tyler1Choosen(ActionEvent event){
     }
 
     public void ArcherChoosen(ActionEvent event){
-        File file = new File("src/main/java/playable-classes/archer/archer-main-image.jpg");
-        Image image = new Image(file.toURI().toString());
-        characterMainImage.setImage(image);
-
+        characterMainImageArcher.setVisible(true);
+        characterMainImageTyler.setVisible(false);
+        characterMainImageMage.setVisible(false);
         classInfo.setText(
                 "Class name:Archer\n" +
                         "HP:100\n" +
@@ -56,10 +59,9 @@ public void tyler1Choosen(ActionEvent event){
     }
 
     public void MageChoosen(ActionEvent event){
-        File file = new File("src/main/java/playable-classes/mage/mage-main-image.jpg");
-        Image image = new Image(file.toURI().toString());
-        characterMainImage.setImage(image);
-
+       characterMainImageMage.setVisible(true);
+        characterMainImageArcher.setVisible(false);
+        characterMainImageTyler.setVisible(false);
         classInfo.setText(
                 "Class name:Mage\n" +
                         "HP:80\n" +

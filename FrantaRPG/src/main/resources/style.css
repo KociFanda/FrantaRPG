@@ -40,3 +40,10 @@
             -fx-stroke: firebrick;
             -fx-stroke-width: 2px;
         }
+        .small-text{
+            -fx-font-family:Elephant;
+            -fx-font-size: 18px;
+            -fx-text-fill: black;
+            -fx-stroke: firebrick;
+            -fx-stroke-width: 2px;
+        }

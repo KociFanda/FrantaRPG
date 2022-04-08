@@ -5,50 +5,41 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="mainLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.MainMenu">
+<AnchorPane fx:id="mainLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.MainMenu">
 
    <ImageView fx:id="imageView" fitHeight="490.0" fitWidth="729.0" pickOnBounds="true" BorderPane.alignment="CENTER">
-      <Image url="@/main-menu.jpg" />
+      <Image url="@../../../img/main-menu.jpg" />
    </ImageView>
 
-   <StackPane prefHeight="99.0" prefWidth="720.0" AnchorPane.bottomAnchor="381.0" AnchorPane.leftAnchor="0.0"
-              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+   <StackPane prefHeight="99.0" prefWidth="720.0" AnchorPane.bottomAnchor="381.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <Label prefHeight="99.0" prefWidth="397.0" styleClass="title" stylesheets="@../../../style.css" text="Franta RPG">
          <effect>
-            <DropShadow spread="0.9"/>
+            <DropShadow spread="0.9" />
          </effect>
       </Label>
    </StackPane>
-   <VBox alignment="CENTER" layoutX="190.0" layoutY="134.0" prefHeight="265.0" prefWidth="350.0"
-         AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="180.0"
-         AnchorPane.topAnchor="134.0">
-      <Button mnemonicParsing="false" onAction="#onNewGameClick" styleClass="button-style"
-              stylesheets="@../../../style.css" text="New Game">
+   <VBox alignment="CENTER" layoutX="190.0" layoutY="134.0" prefHeight="265.0" prefWidth="350.0" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="134.0">
+      <Button mnemonicParsing="false" onAction="#onNewGameClick" styleClass="button-style" stylesheets="@../../../style.css" text="New Game">
          <effect>
-            <DropShadow blurType="TWO_PASS_BOX" spread="0.9"/>
+            <DropShadow blurType="TWO_PASS_BOX" spread="0.9" />
          </effect>
       </Button>
 
-      <Button cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false"
-              graphicTextGap="0.0" mnemonicParsing="false" onAction="#LoadGame" scaleShape="false"
-              styleClass="button-style" stylesheets="@../../../style.css" text="Load Game" textAlignment="JUSTIFY">
+      <Button cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" mnemonicParsing="false" onAction="#LoadGame" scaleShape="false" styleClass="button-style" stylesheets="@../../../style.css" text="Load Game" textAlignment="JUSTIFY">
       <effect>
-         <DropShadow blurType="TWO_PASS_BOX" spread="0.9"/>
+         <DropShadow blurType="TWO_PASS_BOX" spread="0.9" />
       </effect>
    </Button>
 
-      <Button mnemonicParsing="false" onAction="#Credits" styleClass="button-style" stylesheets="@../../../style.css"
-              text="Credits">
+      <Button mnemonicParsing="false" onAction="#Credits" styleClass="button-style" stylesheets="@../../../style.css" text="Credits">
          <effect>
-            <DropShadow blurType="TWO_PASS_BOX" spread="0.9"/>
+            <DropShadow blurType="TWO_PASS_BOX" spread="0.9" />
          </effect>
       </Button>
 
-      <Button cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false"
-              graphicTextGap="0.0" mnemonicParsing="false" onAction="#END" scaleShape="false" styleClass="button-style"
-              stylesheets="@../../../style.css" text="End" textAlignment="JUSTIFY">
+      <Button cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" mnemonicParsing="false" onAction="#END" scaleShape="false" styleClass="button-style" stylesheets="@../../../style.css" text="End" textAlignment="JUSTIFY">
          <effect>
-            <DropShadow blurType="TWO_PASS_BOX" spread="0.9"/>
+            <DropShadow blurType="TWO_PASS_BOX" spread="0.9" />
          </effect>
       </Button>
    </VBox>
