@@ -9,95 +9,111 @@
 
 <AnchorPane fx:id="mainLayout" focusTraversable="true" prefHeight="580.0" prefWidth="820.0" styleClass="character-creation-background" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.CharacterCreation">
    <children>
-      <ImageView fx:id="imageView" fitHeight="580.0" fitWidth="820.0" nodeOrientation="INHERIT" pickOnBounds="true" smooth="false">
+      <ImageView fx:id="imageView" fitHeight="580.0" fitWidth="820.0" layoutY="4.0" nodeOrientation="INHERIT" pickOnBounds="true" smooth="false">
          <image>
             <Image url="@../../../img/pillars.png" />
          </image>
         </ImageView>
-      <StackPane layoutY="72.0" prefHeight="72.0" prefWidth="820.0">
+
+
+      <Pane layoutX="101.0" layoutY="68.0" prefHeight="491.0" prefWidth="632.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="101.0" AnchorPane.rightAnchor="87.0" AnchorPane.topAnchor="68.0">
          <children>
-            <Label prefHeight="57.0" prefWidth="444.0" styleClass="title2" stylesheets="@../../../style.css" text="Character Creation">
-            <effect>
-               <DropShadow spread="0.9" />
-            </effect>
-         </Label>
+            <StackPane layoutX="-1.0" layoutY="7.0" prefHeight="57.0" prefWidth="653.0">
+               <children>
+                  <Label prefHeight="57.0" prefWidth="444.0" styleClass="title2" stylesheets="@../../../style.css" text="Character Creation">
+                  <effect>
+                     <DropShadow spread="0.9" />
+                  </effect>
+               </Label>
+               </children>
+            </StackPane>
+            <MenuButton alignment="CENTER" layoutX="420.0" layoutY="142.0" minHeight="25.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="121.0" styleClass="drop-down-menu" stylesheets="@../../../style.css" text="Class">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#tyler1Choosen" text="Tyler1" />
+                <MenuItem mnemonicParsing="false" onAction="#MageChoosen" text="Mage" />
+                 <MenuItem mnemonicParsing="false" onAction="#ArcherChoosen" text="Archer" />
+              </items>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </MenuButton>
+            <Button layoutX="480.0" layoutY="440.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="159.0" styleClass="button-style" stylesheets="@../../../style.css" text="Create">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" spread="0.74" />
+               </effect>
+            </Button>
+            <TextArea fx:id="classInfo" layoutX="380.0" layoutY="194.0" prefHeight="200.0" prefWidth="200.0" styleClass="small-text" stylesheets="@../../../style.css">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow radius="11.0" width="25.0" />
+               </effect>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </TextArea>
+            <Label layoutX="57.0" layoutY="84.0" styleClass="title3" stylesheets="@../../../style.css" text="Enter character name" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow spread="0.4" />
+               </effect>
+            </Label>
+            <TextField layoutX="67.0" layoutY="117.0" maxHeight="55.0" maxWidth="220.0" prefHeight="50.0" prefWidth="200.0">
+               <effect>
+                  <InnerShadow choke="0.4" />
+               </effect>
+            </TextField>
+      
+            <ImageView fx:id="characterMainImageTyler" fitHeight="200.0" fitWidth="245.0" layoutX="65.0" layoutY="210.0" pickOnBounds="true" visible="false">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <image>
+                  <Image url="@../../../img/tyler1-main-image.jpg" />
+               </image>
+            </ImageView>
+      
+            <ImageView fx:id="characterMainImageMage" fitHeight="200.0" fitWidth="245.0" layoutX="65.0" layoutY="210.0" pickOnBounds="true" visible="false">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <image>
+                  <Image url="@../../../img/mage-main-image.jpg" />
+               </image>
+            </ImageView>
+      
+            <ImageView fx:id="characterMainImageArcher" fitHeight="200.0" fitWidth="245.0" layoutX="65.0" layoutY="210.0" pickOnBounds="true" visible="false">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <image>
+                  <Image url="@../../../img/archer-main-image.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="255.0" fitWidth="318.0" layoutX="27.0" layoutY="181.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../img/frame-character-creation.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="64.0" fitWidth="141.0" layoutX="40.0" layoutY="459.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/arrow-back.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="79.0" layoutY="446.0" onMouseClicked="#goBack" text="Back" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" spread="0.11" />
+               </effect>
+            </Label>
          </children>
-      </StackPane>
-      <MenuButton alignment="CENTER" layoutX="510.0" layoutY="210.0" minHeight="25.0" mnemonicParsing="false" prefWidth="100.0" text="Class" AnchorPane.bottomAnchor="345.0" AnchorPane.leftAnchor="510.0" AnchorPane.rightAnchor="210.0" AnchorPane.topAnchor="210.0">
-        <items>
-          <MenuItem mnemonicParsing="false" onAction="#tyler1Choosen" text="Tyler1" />
-          <MenuItem mnemonicParsing="false" onAction="#MageChoosen" text="Mage" />
-           <MenuItem mnemonicParsing="false" onAction="#ArcherChoosen" text="Archer" />
-        </items>
-      </MenuButton>
-      <Label layoutX="116.0" layoutY="496.0" text="Back" textFill="WHITE">
-         <font>
-            <Font size="17.0" />
-         </font>
-         <effect>
-            <DropShadow blurType="TWO_PASS_BOX" spread="0.11" />
-         </effect>
-      </Label>
-      <Button layoutX="560.0" layoutY="485.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="159.0" styleClass="button-style" stylesheets="@../../../style.css" text="Create" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="560.0" AnchorPane.rightAnchor="101.0" AnchorPane.topAnchor="485.0">
-         <effect>
-            <DropShadow blurType="TWO_PASS_BOX" spread="0.74" />
-         </effect>
-      </Button>
-      <TextArea fx:id="classInfo" layoutX="460.0" layoutY="255.0" prefHeight="200.0" prefWidth="200.0" styleClass="small-text" stylesheets="@../../../style.css" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="460.0" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="255.0">
-         <font>
-            <Font name="Franklin Gothic Heavy" size="12.0" />
-         </font></TextArea>
-      <Label layoutX="104.0" layoutY="144.0" text="Enter character name" textFill="WHITE" AnchorPane.bottomAnchor="406.0" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="528.0" AnchorPane.topAnchor="144.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-         <effect>
-            <DropShadow spread="0.4" />
-         </effect>
-      </Label>
-      <TextField layoutX="99.0" layoutY="174.0" prefHeight="48.0" prefWidth="219.0" AnchorPane.bottomAnchor="358.0" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="502.0" AnchorPane.topAnchor="174.0">
-         <effect>
-            <InnerShadow choke="0.4" />
-         </effect>
-      </TextField>
-      <ImageView fitHeight="57.0" fitWidth="100.0" layoutX="98.0" layoutY="509.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.055557250976562" AnchorPane.leftAnchor="98.0" AnchorPane.rightAnchor="622.0" AnchorPane.topAnchor="509.0">
-         <image>
-            <Image url="@../../../img/arrow-back.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="255.0" fitWidth="318.0" layoutX="99.0" layoutY="228.0" pickOnBounds="true" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="403.0" AnchorPane.topAnchor="228.0">
-         <image>
-            <Image url="@../../../img/frame-character-creation.png" />
-         </image>
-      </ImageView>
+      </Pane>
 
-      <ImageView fx:id="characterMainImageTyler" fitHeight="200.0" fitWidth="245.0" layoutX="134.0" layoutY="257.0" pickOnBounds="true" visible="false" AnchorPane.bottomAnchor="123.0" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="441.0" AnchorPane.topAnchor="257.0">
-         <viewport>
-            <Rectangle2D />
-         </viewport>
-         <image>
-            <Image url="@../../../img/tyler1-main-image.jpg" />
-         </image>
-      </ImageView>
-      <!-- Kamaradi -->
-           <ImageView fx:id="characterMainImageMage" fitHeight="200.0" fitWidth="245.0" layoutX="134.0" layoutY="257.0" pickOnBounds="true" visible="false" AnchorPane.bottomAnchor="123.0" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="441.0" AnchorPane.topAnchor="257.0">
-              <viewport>
-                 <Rectangle2D />
-              </viewport>
-              <image>
-                 <Image url="@../../../img/mage-main-image.jpg" />
-              </image>
-           </ImageView>
-
-           <ImageView fx:id="characterMainImageArcher" fitHeight="200.0" fitWidth="245.0" layoutX="134.0" layoutY="257.0" pickOnBounds="true" visible="false" AnchorPane.bottomAnchor="123.0" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="441.0" AnchorPane.topAnchor="257.0">
-              <viewport>
-                 <Rectangle2D />
-              </viewport>
-              <image>
-                 <Image url="@../../../img/archer-main-image.jpg" />
-              </image>
-           </ImageView>
-      <!-- Kamaradi -->
 
         </children>
      </AnchorPane>

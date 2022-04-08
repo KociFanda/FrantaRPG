@@ -28,12 +28,19 @@ public class MainMenu implements Initializable {
 
     @FXML
     public void onNewGameClick(ActionEvent event) throws IOException {
+
+
         System.out.println("Creating new window ;] :]");
         root = FXMLLoader.load(getClass().getResource("character-creation.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);;
         stage.setScene(scene);
+        stage.setMaximized(false);
+        stage.setMinHeight(680);
+        stage.setMinWidth(920);
+        stage.setResizable(false);
         stage.show();
+
 
     }
 

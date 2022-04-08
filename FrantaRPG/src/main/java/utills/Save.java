@@ -7,7 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 public class Save {
-    public static void save(){
+    public static void save(String name /*objekt CLass s hodnotou bud Tyler1/Archer/Mage a ty classy by v sobe meli info o atributech  */){
         try {
             Player player = new Player("testNamdsadasdasdasdasdasdas");
             FileWriter myWriter = new FileWriter("src/main/java/utills/save.txt");

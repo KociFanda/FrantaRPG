@@ -14,6 +14,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -28,6 +29,7 @@ public class CharacterCreation implements Initializable {
     private Parent root;
     public AnchorPane mainLayout;
     public ImageView imageView;
+    public String ChossenCharacter;
 
 public void tyler1Choosen(ActionEvent event){
        /* File file = new File("src/main/resources/img/tyler1-main-image.jpg");
@@ -42,8 +44,9 @@ characterMainImageMage.setVisible(false);
            "STR:10\n" +
            "AGI:5\n" +
            "INT:5\n" );
-
+ChossenCharacter = "tyler1";
     }
+
 
     public void ArcherChoosen(ActionEvent event){
         characterMainImageArcher.setVisible(true);
@@ -55,7 +58,7 @@ characterMainImageMage.setVisible(false);
                         "STR:5\n" +
                         "AGI:10\n" +
                         "INT:5\n" );
-
+        ChossenCharacter = "archer";
     }
 
     public void MageChoosen(ActionEvent event){
@@ -68,7 +71,7 @@ characterMainImageMage.setVisible(false);
                         "STR:5\n" +
                         "AGI:5\n" +
                         "INT:10" );
-
+        ChossenCharacter = "mage";
     }
 
     public void goBack(MouseEvent event) throws IOException {
@@ -77,6 +80,7 @@ characterMainImageMage.setVisible(false);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(true);
         stage.show();
     }
 
@@ -86,4 +90,8 @@ characterMainImageMage.setVisible(false);
         imageView.fitWidthProperty().bind(mainLayout.widthProperty());
     }
 
+    public void CreateCharacter(ActionEvent actionEvent) {
+        FileWriter writer = new FileWriter();
+
+    }
 }
