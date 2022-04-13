@@ -7,11 +7,11 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 public class Save {
-    public static void save(String name /*objekt CLass s hodnotou bud Tyler1/Archer/Mage a ty classy by v sobe meli info o atributech  */){
+    public static void save(String name, int HP, int Strength, int Agility, int Inteligence, int Gold){
         try {
-            Player player = new Player("testNamdsadasdasdasdasdasdas");
+            Player player = new Player();
             FileWriter myWriter = new FileWriter("src/main/java/utills/save.txt");
-            myWriter.write("franta\n100\n150\n456" );
+            myWriter.write(name, 100\n150\n456" );
             myWriter.close();
         } catch (Exception e) {
             e.printStackTrace();

@@ -8,16 +8,14 @@ public class LoadSave {
     public static void load(){
         try {
             BufferedReader br = new BufferedReader(new FileReader("FrantaRPG/src/main/java/utills/save.txt"));
-            Player player = new Player("testNamdsadasdasdasdasdasdas");
+            Player player = new Player();
             player.setName(br.readLine());
             player.setHp(Integer.parseInt(br.readLine()));
-            player.setDmg(Integer.parseInt(br.readLine()));
             player.setGold(Integer.parseInt(br.readLine()));
 
             System.out.println();
             System.out.println(player.getName());
             System.out.println(player.getHp());
-            System.out.println(player.getDmg());
             System.out.println(player.getGold());
 
             br.close();

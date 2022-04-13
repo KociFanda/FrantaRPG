@@ -3,13 +3,19 @@ package com.example.frantarpg.entity;
 public class Player{
 
     private String name;
-    private int dmg;
+    private int strength;
+    private int inteligence;
+    private int agility;
     private int hp;
     private int gold;
 
-    //attributes
-    private int strength;
-    private int inteligence;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public int getStrength() {
         return strength;
@@ -27,42 +33,12 @@ public class Player{
         this.inteligence = inteligence;
     }
 
-
-    public Player(String name, int dmg, int hp, int gold, int strength, int inteligence) {
-        this.name = name;
-        this.dmg = dmg;
-        this.hp = hp;
-        this.gold = gold;
-        this.strength = strength;
-        this.inteligence = inteligence;
+    public int getAgility() {
+        return agility;
     }
 
-
-    public Player(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Player(String name, int dmg, int hp, int gold) {
-        this.name = name;
-        this.dmg = dmg;
-        this.hp = hp;
-        this.gold = gold;
-    }
-
-    public int getDmg() {
-        return dmg;
-    }
-
-    public void setDmg(int dmg) {
-        this.dmg = dmg;
+    public void setAgility(int agility) {
+        this.agility = agility;
     }
 
     public int getHp() {
@@ -80,5 +56,17 @@ public class Player{
     public void setGold(int gold) {
         this.gold = gold;
     }
+
+    public Player() {
+        this.name = "";
+        this.strength = 0;
+        this.inteligence = 0;
+        this.agility = 0;
+        this.hp = 0;
+        this.gold = 0;
+    }
+
+
+
 
 }
