@@ -16,7 +16,7 @@
         </ImageView>
 
 
-      <Pane layoutX="101.0" layoutY="68.0" prefHeight="491.0" prefWidth="632.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="101.0" AnchorPane.rightAnchor="87.0" AnchorPane.topAnchor="68.0">
+      <Pane layoutX="101.0" layoutY="68.0" prefHeight="513.0" prefWidth="632.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="101.0" AnchorPane.rightAnchor="87.0" AnchorPane.topAnchor="68.0">
          <children>
             <StackPane layoutX="-1.0" layoutY="7.0" prefHeight="57.0" prefWidth="653.0">
                <children>
@@ -29,20 +29,20 @@
             </StackPane>
             <MenuButton alignment="CENTER" layoutX="420.0" layoutY="142.0" minHeight="25.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="121.0" styleClass="drop-down-menu" stylesheets="@../../../style.css" text="Class">
               <items>
-                <MenuItem mnemonicParsing="false" onAction="#tyler1Choosen" text="Tyler1" />
-                <MenuItem mnemonicParsing="false" onAction="#MageChoosen" text="Mage" />
-                 <MenuItem mnemonicParsing="false" onAction="#ArcherChoosen" text="Archer" />
+                <MenuItem mnemonicParsing="false" onAction="#tyler1Chosen" text="Tyler1" />
+                <MenuItem mnemonicParsing="false" onAction="#MageChosen" text="Mage" />
+                 <MenuItem mnemonicParsing="false" onAction="#ArcherChosen" text="Archer" />
               </items>
                <effect>
                   <InnerShadow />
                </effect>
             </MenuButton>
-            <Button layoutX="480.0" layoutY="440.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="159.0" styleClass="button-style" stylesheets="@../../../style.css" text="Create">
+            <Button layoutX="480.0" layoutY="440.0" mnemonicParsing="false" onAction="#CreateCharacter" prefHeight="72.0" prefWidth="159.0" styleClass="button-style" stylesheets="@../../../style.css" text="Create">
                <effect>
                   <DropShadow blurType="TWO_PASS_BOX" spread="0.74" />
                </effect>
             </Button>
-            <TextArea fx:id="classInfo" layoutX="380.0" layoutY="194.0" prefHeight="200.0" prefWidth="200.0" styleClass="small-text" stylesheets="@../../../style.css">
+            <TextArea fx:id="classInfo" editable="false" layoutX="380.0" layoutY="194.0" prefHeight="200.0" prefWidth="200.0" styleClass="small-text" stylesheets="@../../../style.css">
                <font>
                   <Font name="Franklin Gothic Heavy" size="12.0" />
                </font>
@@ -61,7 +61,7 @@
                   <DropShadow spread="0.4" />
                </effect>
             </Label>
-            <TextField layoutX="67.0" layoutY="117.0" maxHeight="55.0" maxWidth="220.0" prefHeight="50.0" prefWidth="200.0">
+            <TextField fx:id="ChosenName" layoutX="67.0" layoutY="117.0" maxHeight="55.0" maxWidth="220.0" prefHeight="50.0" prefWidth="200.0">
                <effect>
                   <InnerShadow choke="0.4" />
                </effect>

@@ -27,6 +27,13 @@ public class MainMenu implements Initializable {
     private Parent root;
 
     @FXML
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        imageView.fitWidthProperty().bind(mainLayout.widthProperty());
+        imageView.fitHeightProperty().bind(mainLayout.heightProperty());
+
+    }
+
     public void onNewGameClick(ActionEvent event) throws IOException {
 
 
@@ -44,6 +51,7 @@ public class MainMenu implements Initializable {
 
     }
 
+
     public void LoadGame(ActionEvent actionEvent) {
         utills.LoadSave.load();
     }
@@ -53,12 +61,7 @@ public class MainMenu implements Initializable {
         Platform.exit();
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        imageView.fitWidthProperty().bind(mainLayout.widthProperty());
-        imageView.fitHeightProperty().bind(mainLayout.heightProperty());
 
-    }
 
     public void Credits(ActionEvent actionEvent) {
         System.out.println("Credits are not finished yet ;( sry");

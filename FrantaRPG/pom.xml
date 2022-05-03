@@ -64,7 +64,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.frantarpg/com.example.frantarpg.HelloApplication</mainClass>
+                            <mainClass>com.example.frantarpg/com.example.frantarpg.StartApp</mainClass>
                         </configuration>
                     </execution>
                 </executions>

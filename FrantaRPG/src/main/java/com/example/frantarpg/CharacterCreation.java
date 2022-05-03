@@ -81,6 +81,10 @@ public void tyler1Chosen(ActionEvent event){
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        stage.setMaxHeight(480);
+        stage.setMaxWidth(720);
+        stage.setMinHeight(480);
+        stage.setMinWidth(720);
         stage.setResizable(true);
         stage.show();
     }
@@ -92,34 +96,40 @@ public void tyler1Chosen(ActionEvent event){
     }
 
     public void CreateCharacter(ActionEvent actionEvent) {
-        player.setName(ChosenName.getText());
 
+        String name="Bezejmeny";
+        int HP = 0;
+        int Strength = 0;
+        int Agility = 0;
+        int Inteligence = 0;
+        int Gold = 0;
      if (ChossenCharacter == "tyler1"){
-         player.setHp(150);
-         player.setStrength(10);
-         player.setAgility(5);
-         player.setInteligence(5);
-        }
-        else if(ChossenCharacter == "mage"){
-         player.setHp(80);
-         player.setStrength(5);
-         player.setAgility(5);
-         player.setInteligence(10);
+        name = ChosenName.getText();
+        HP = 100;
+        Strength= 12;
+        Agility= 5 ;
+        Inteligence = 1;
+        Gold = 50;
 
+        }
+     if(ChossenCharacter == "mage"){
+         name = ChosenName.getText();
+         HP = 70;
+         Strength= 5;
+         Agility= 6 ;
+         Inteligence = 10;
+         Gold = 70;
     }
-     else if(ChossenCharacter == "archer"){
-         player.setHp(100);
-         player.setStrength(5);
-         player.setAgility(10);
-         player.setInteligence(5);
+     if(ChossenCharacter == "archer"){
+         name = ChosenName.getText();
+         HP = 70;
+         Strength= 4;
+         Agility= 10 ;
+         Inteligence = 4;
+         Gold = 20;
      }
 
-        utills.Save.save(player.getName(),
-                player.getHp(),
-                player.getStrength(),
-                player.getAgility(),
-                player.getInteligence(),
-                player.getGold());
+        utills.Save.save( name,  HP,  Strength,  Agility,  Inteligence,  Gold);
 
 
     }

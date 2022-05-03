@@ -11,7 +11,7 @@ public class Save {
         try {
             Player player = new Player();
             FileWriter myWriter = new FileWriter("src/main/java/utills/save.txt");
-            myWriter.write(name, 100\n150\n456" );
+            myWriter.write(name + HP + Strength + Agility + Inteligence + Gold );
             myWriter.close();
         } catch (Exception e) {
             e.printStackTrace();
