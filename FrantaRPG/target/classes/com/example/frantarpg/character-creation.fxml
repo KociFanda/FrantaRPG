@@ -66,6 +66,14 @@
                   <InnerShadow choke="0.4" />
                </effect>
             </TextField>
+            <ImageView fx:id="questionMark" fitHeight="200.0" fitWidth="245.0" layoutX="67.0" layoutY="210.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../img/otaznikVyberPostavy.jpg" />
+               </image>
+               <effect>
+                  <MotionBlur radius="0.75" />
+               </effect>
+            </ImageView>
       
             <ImageView fx:id="characterMainImageTyler" fitHeight="200.0" fitWidth="245.0" layoutX="65.0" layoutY="210.0" pickOnBounds="true" visible="false">
                <viewport>
@@ -110,6 +118,11 @@
                <effect>
                   <DropShadow blurType="TWO_PASS_BOX" spread="0.11" />
                </effect>
+            </Label>
+            <Label fx:id="warning" layoutX="347.0" layoutY="410.0" text="! Choose your class !" textFill="RED" visible="false">
+               <font>
+                  <Font name="Elephant" size="27.0" />
+               </font>
             </Label>
          </children>
       </Pane>

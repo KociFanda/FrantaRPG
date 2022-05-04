@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -27,6 +28,8 @@ public class CharacterCreation implements Initializable {
     public ImageView characterMainImageArcher;
     public ImageView characterMainImageMage;
     public TextField ChosenName;
+    public ImageView questionMark;
+    public Label warning;
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -36,6 +39,7 @@ public class CharacterCreation implements Initializable {
     public Player player;
 
 public void tyler1Chosen(ActionEvent event){
+    questionMark.setVisible(false);
     characterMainImageTyler.setVisible(true);
     characterMainImageArcher.setVisible(false);
     characterMainImageMage.setVisible(false);
@@ -50,6 +54,7 @@ public void tyler1Chosen(ActionEvent event){
 
 
     public void ArcherChosen(ActionEvent event){
+        questionMark.setVisible(false);
         characterMainImageArcher.setVisible(true);
         characterMainImageTyler.setVisible(false);
         characterMainImageMage.setVisible(false);
@@ -63,6 +68,7 @@ public void tyler1Chosen(ActionEvent event){
     }
 
     public void MageChosen(ActionEvent event){
+        questionMark.setVisible(false);
        characterMainImageMage.setVisible(true);
         characterMainImageArcher.setVisible(false);
         characterMainImageTyler.setVisible(false);
@@ -104,8 +110,14 @@ public void tyler1Chosen(ActionEvent event){
         int Agility = 0;
         int Inteligence = 0;
         int Gold = 0;
+
+        if (HP == 0) {
+            warning.setVisible(true);
+        }
+        else{
      if (ChossenCharacter == "tyler1"){
         name = ChosenName.getText();
+         name = name.replace(" ", "");
         ClassNAME = "Tyler1";
         HP = 100;
         Strength= 12;
@@ -116,6 +128,7 @@ public void tyler1Chosen(ActionEvent event){
         }
      if(ChossenCharacter == "mage"){
          name = ChosenName.getText();
+         name = name.replace(" ", "");
          ClassNAME = "Mage";
          HP = 70;
          Strength= 5;
@@ -125,6 +138,7 @@ public void tyler1Chosen(ActionEvent event){
     }
      if(ChossenCharacter == "archer"){
          name = ChosenName.getText();
+         name = name.replace(" ", "");
          ClassNAME = "Archer";
          HP = 70;
          Strength= 4;
@@ -132,14 +146,9 @@ public void tyler1Chosen(ActionEvent event){
          Inteligence = 4;
          Gold = 20;
      }
-if (ChosenName == null){
-    name = "Bezejmeny";
-}
 
         utills.Save.save( name,  ClassNAME, HP,  Strength,  Agility,  Inteligence,  Gold);
-
-
-    }
-
+        }
+}
 
 }
