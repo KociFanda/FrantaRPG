@@ -7,11 +7,12 @@ import java.io.FileReader;
 public class LoadSave {
     public static void load(){
         try {
-            BufferedReader br = new BufferedReader(new FileReader("FrantaRPG/src/main/java/utills/save.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("save.txt"));
             Player player = new Player();
             player.setName(br.readLine());
             player.setHp(Integer.parseInt(br.readLine()));
             player.setGold(Integer.parseInt(br.readLine()));
+
 
             System.out.println();
             System.out.println(player.getName());

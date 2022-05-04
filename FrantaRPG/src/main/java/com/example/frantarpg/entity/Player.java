@@ -3,6 +3,7 @@ package com.example.frantarpg.entity;
 public class Player{
 
     private String name;
+    private String player_class;
     private int strength;
     private int inteligence;
     private int agility;
@@ -17,6 +18,13 @@ public class Player{
         this.name = name;
     }
 
+    public String getPlayer_class() {
+        return player_class;
+    }
+
+    public void setPlayer_class(String player_class) {
+        this.player_class = player_class;
+    }
     public int getStrength() {
         return strength;
     }
@@ -59,6 +67,7 @@ public class Player{
 
     public Player() {
         this.name = "";
+        this.player_class = "";
         this.strength = 0;
         this.inteligence = 0;
         this.agility = 0;

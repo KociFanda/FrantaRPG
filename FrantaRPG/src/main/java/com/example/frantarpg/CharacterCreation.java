@@ -98,6 +98,7 @@ public void tyler1Chosen(ActionEvent event){
     public void CreateCharacter(ActionEvent actionEvent) {
 
         String name="Bezejmeny";
+        String ClassNAME= "nodata";
         int HP = 0;
         int Strength = 0;
         int Agility = 0;
@@ -105,6 +106,7 @@ public void tyler1Chosen(ActionEvent event){
         int Gold = 0;
      if (ChossenCharacter == "tyler1"){
         name = ChosenName.getText();
+        ClassNAME = "Tyler1";
         HP = 100;
         Strength= 12;
         Agility= 5 ;
@@ -114,6 +116,7 @@ public void tyler1Chosen(ActionEvent event){
         }
      if(ChossenCharacter == "mage"){
          name = ChosenName.getText();
+         ClassNAME = "Mage";
          HP = 70;
          Strength= 5;
          Agility= 6 ;
@@ -122,14 +125,18 @@ public void tyler1Chosen(ActionEvent event){
     }
      if(ChossenCharacter == "archer"){
          name = ChosenName.getText();
+         ClassNAME = "Archer";
          HP = 70;
          Strength= 4;
          Agility= 10 ;
          Inteligence = 4;
          Gold = 20;
      }
+if (ChosenName == null){
+    name = "Bezejmeny";
+}
 
-        utills.Save.save( name,  HP,  Strength,  Agility,  Inteligence,  Gold);
+        utills.Save.save( name,  ClassNAME, HP,  Strength,  Agility,  Inteligence,  Gold);
 
 
     }
