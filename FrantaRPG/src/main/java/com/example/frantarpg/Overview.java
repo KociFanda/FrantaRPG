@@ -1,27 +1,40 @@
 package com.example.frantarpg;
 
 import com.example.frantarpg.entity.Player;
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import utills.LoadSave;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Overview implements Initializable {
     public ImageView playerImage;
-
+    public Label playerName;
+    public TextArea playerStats;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         FileInputStream inputstream = null;
-        Player player = new Player();
+        Player player = null;
+        try {
+            player = new Player();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         Image image;
 
         String test2 = player.getPlayer_class();
-        System.out.println("TEST: " + test2);
+        String test3 = player.getName();
+        System.out.println("TEST: " + test2 + test3 + " test ");
 
 
         switch (test2){
@@ -34,7 +47,10 @@ public class Overview implements Initializable {
                     e.printStackTrace();
                 }
                  image = new Image(inputstream);
+
                 playerImage.setImage(image);
+                playerName.setText(player.getName());
+                playerStats.setText(String.valueOf(player.getHp() + "\n" + player.getStrength() + "\n" + player.getAgility() + "\n" + player.getInteligence()));
                 break;
 
             case "Mage":
@@ -45,7 +61,10 @@ public class Overview implements Initializable {
                     e.printStackTrace();
                 }
                  image = new Image(inputstream);
+
                 playerImage.setImage(image);
+                playerName.setText(player.getName());
+
                 break;
 
             case "Tyler1":
@@ -56,11 +75,21 @@ public class Overview implements Initializable {
                     e.printStackTrace();
                 }
                  image = new Image(inputstream);
+
                 playerImage.setImage(image);
+                playerName.setText(player.getName());
+
                 break;
         }
 
 
+    }
+
+    public void buttonClick(ActionEvent actionEvent) throws IOException {
+        Player player = new Player();
+        String test2 = player.getPlayer_class();
+        String test3 = player.getName();
+        System.out.println("TEST: " + test2 + test3 + " test ");
     }
 }
 

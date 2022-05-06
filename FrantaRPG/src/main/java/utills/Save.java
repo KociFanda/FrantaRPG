@@ -10,8 +10,6 @@ public class Save {
 
     public static void save(String name, String ClassNAME, int HP, int Strength, int Agility, int Inteligence, int Gold){
         try {
-
-
             String kontrola;
             Player player = new Player();
             FileWriter myWriter = new FileWriter("save.txt");

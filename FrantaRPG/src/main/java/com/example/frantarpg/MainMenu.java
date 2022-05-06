@@ -1,5 +1,6 @@
 package com.example.frantarpg;
 
+import com.example.frantarpg.entity.Player;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,6 +26,7 @@ public class MainMenu implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    Player player;
 
     @FXML
     @Override

@@ -41,7 +41,7 @@
             -fx-stroke-width: 2px;
         }
         .small-text{
-            -fx-font-family:Helvetica;
+            -fx-font-family:Franklin Gothic Heavy;
             -fx-font-size: 16px;
             -fx-text-fill: black;
             -fx-stroke: firebrick;

@@ -158,10 +158,10 @@ public void tyler1Chosen(ActionEvent event){
         stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
-        stage.setMaxHeight(480);
-        stage.setMaxWidth(720);
-        stage.setMinHeight(480);
-        stage.setMinWidth(720);
+        stage.setMaxHeight(600);
+        stage.setMaxWidth(800);
+        stage.setMinHeight(600);
+        stage.setMinWidth(800);
         stage.setResizable(true);
         stage.show();
 
