@@ -78,10 +78,10 @@ public class Player{
 
         this.name = pomocnaPoleOrna_a_ValecnaKamo[0];
         this.player_class = pomocnaPoleOrna_a_ValecnaKamo[1];
-        this.strength = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[2]);
-        this.inteligence = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[3]);
+        this.hp = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[2]);
+        this.strength = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[3]);
         this.agility = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[4]);
-        this.hp = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[5]);
+        this.inteligence = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[5]);
         this.gold = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[6]);
     }
 
