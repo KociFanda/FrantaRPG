@@ -1,1 +1,1 @@
-Bezejmeny nodata 0 0 0 0 0
+Bezejmeny Mage 70 5 6 10 70

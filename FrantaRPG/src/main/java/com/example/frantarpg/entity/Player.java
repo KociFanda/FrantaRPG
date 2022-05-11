@@ -1,7 +1,11 @@
 package com.example.frantarpg.entity;
 
-public class Player{
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
+public class Player{
     private String name;
     private String player_class;
     private int strength;
@@ -9,6 +13,7 @@ public class Player{
     private int agility;
     private int hp;
     private int gold;
+
 
     public String getName() {
         return name;
@@ -65,14 +70,19 @@ public class Player{
         this.gold = gold;
     }
 
-    public Player() {
-        this.name = "";
-        this.player_class = "";
-        this.strength = 0;
-        this.inteligence = 0;
-        this.agility = 0;
-        this.hp = 0;
-        this.gold = 0;
+    public Player() throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader("save.txt"));
+        String[] pomocnaPoleOrna_a_ValecnaKamo;
+        String docasnyString = br.readLine();
+        pomocnaPoleOrna_a_ValecnaKamo = docasnyString.split(" ", 7);
+
+        this.name = pomocnaPoleOrna_a_ValecnaKamo[0];
+        this.player_class = pomocnaPoleOrna_a_ValecnaKamo[1];
+        this.hp = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[2]);
+        this.strength = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[3]);
+        this.agility = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[4]);
+        this.inteligence = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[5]);
+        this.gold = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[6]);
     }
 
 

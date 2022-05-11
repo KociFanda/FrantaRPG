@@ -36,7 +36,7 @@ public class CharacterCreation implements Initializable {
     private Parent root;
     public AnchorPane mainLayout;
     public ImageView imageView;
-    public String ChossenCharacter;
+    public String ChossenCharacter = "no";
     public Player player;
     public Object object;
 public void tyler1Chosen(ActionEvent event){
@@ -93,7 +93,7 @@ public void tyler1Chosen(ActionEvent event){
         imageView.fitWidthProperty().bind(mainLayout.widthProperty());
     }
 
-    public void CreateCharacter(ActionEvent actionEvent) {
+    public void CreateCharacter(ActionEvent actionEvent) throws IOException {
 
         String name="Bezejmeny";
         String ClassNAME= "nodata";
@@ -103,7 +103,7 @@ public void tyler1Chosen(ActionEvent event){
         int Inteligence = 0;
         int Gold = 0;
 
-        if (HP == 0) {
+        if (ChossenCharacter == "no") {
             warning.setVisible(true);
         }
         else{
@@ -138,9 +138,25 @@ public void tyler1Chosen(ActionEvent event){
          Inteligence = 4;
          Gold = 20;
      }
+     if(name == "" ){ name = "Bezejmeny" ;}
 
         utills.Save.save( name,  ClassNAME, HP,  Strength,  Agility,  Inteligence,  Gold);
         }
+
+
+
+        System.out.println("\n" + "***************" + "Creating new game" + "***************");
+        root = FXMLLoader.load(getClass().getResource("overview.fxml"));
+        stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setMaxHeight(625);
+        stage.setMaxWidth(805);
+        stage.setMinHeight(625);
+        stage.setMinWidth(805);
+        stage.setResizable(true);
+        stage.show();
+
 }
 
 }

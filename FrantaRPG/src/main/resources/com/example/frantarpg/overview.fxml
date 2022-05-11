@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.Overview">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../img/overview-background.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="230.0" fitWidth="219.0" layoutX="560.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/frame-character-creation.png" />
+         </image></ImageView>
+      <ImageView fx:id="playerImage" fitHeight="181.0" fitWidth="164.0" layoutX="587.0" layoutY="89.0" pickOnBounds="true" />
+      <Label fx:id="playerName" layoutX="567.0" layoutY="24.0" prefHeight="39.0" prefWidth="204.0" styleClass="title3" stylesheets="@../../../style.css" text="NoData">
+         <effect>
+            <DropShadow spread="0.66" />
+         </effect></Label>
+      <TextArea fx:id="playerStats" editable="false" layoutX="565.0" layoutY="300.0" prefHeight="270.0" prefWidth="204.0" styleClass="small-text" stylesheets="@../../../style.css">
+         <effect>
+            <InnerShadow choke="0.31" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextArea>
+      <Button layoutY="511.0" mnemonicParsing="false" onAction="#goback" prefHeight="73.0" prefWidth="246.0" styleClass="button-style" stylesheets="@../../../style.css" text="Main Menu ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" height="19.52" radius="8.89" spread="0.69" width="18.04" />
+         </effect></Button>
+      <Button layoutX="220.0" layoutY="77.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="139.0" styleClass="button-style" stylesheets="@../../../style.css" text="Fight">
+         <effect>
+            <DropShadow spread="0.66" />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
