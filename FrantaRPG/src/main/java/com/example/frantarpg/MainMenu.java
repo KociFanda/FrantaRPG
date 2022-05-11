@@ -25,6 +25,7 @@ public class MainMenu implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    Object object;
 
     @FXML
     @Override
@@ -38,7 +39,9 @@ public class MainMenu implements Initializable {
 
 
         System.out.println("Creating new window ;] :]");
-        root = FXMLLoader.load(getClass().getResource("character-creation.fxml"));
+        utills.CreateWindow.Create(event, object = getClass().getResource("character-creation.fxml"), 920 , 680, true  );
+
+       /* root = FXMLLoader.load(getClass().getResource("character-creation.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);;
         stage.setScene(scene);
@@ -46,7 +49,7 @@ public class MainMenu implements Initializable {
         stage.setMinHeight(680);
         stage.setMinWidth(920);
         stage.setResizable(false);
-        stage.show();
+        stage.show();*/
 
 
     }

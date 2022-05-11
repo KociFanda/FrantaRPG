@@ -10,6 +10,15 @@
             -fx-stroke-width: 2px;
 
         }
+        .klass{
+            -fx-text-fill:white;
+            -fx-font-size:35px ;
+            -fx-border: 10px;
+            -fx-background-image: url("img/arrow-back.png");
+            -fx-background-color: transparent;
+            -fx-background-repeat: round ;
+            -fx-border: none;
+        }
         .button-style{
             -fx-text-fill:white;
             -fx-font-size:35px ;
