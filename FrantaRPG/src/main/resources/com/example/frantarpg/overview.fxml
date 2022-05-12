@@ -6,19 +6,27 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.Overview">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.Overview">
    <children>
       <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true">
          <image>
             <Image url="@../../../img/overview-background.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="230.0" fitWidth="219.0" layoutX="560.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="101.0" fitWidth="164.0" layoutX="397.0" layoutY="507.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../img/frame-character-creation.png" />
+            <Image url="@../../../img/coins.png" />
+         </image>
+         <effect>
+            <DropShadow height="26.93" radius="14.4475" spread="0.54" width="32.86" />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="230.0" fitWidth="220.0" layoutX="560.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/frame.png" />
          </image></ImageView>
       <ImageView fx:id="playerImage" fitHeight="181.0" fitWidth="164.0" layoutX="587.0" layoutY="89.0" pickOnBounds="true" />
-      <Label fx:id="playerName" layoutX="567.0" layoutY="24.0" prefHeight="39.0" prefWidth="204.0" styleClass="title3" stylesheets="@../../../style.css" text="NoData">
+      <Label fx:id="playerName" alignment="CENTER" layoutX="567.0" layoutY="24.0" prefHeight="39.0" prefWidth="204.0" styleClass="title3" stylesheets="@../../../style.css" text="NoData">
          <effect>
             <DropShadow spread="0.66" />
          </effect></Label>
@@ -36,10 +44,15 @@
          <effect>
             <DropShadow blurType="TWO_PASS_BOX" height="19.52" radius="8.89" spread="0.69" width="18.04" />
          </effect></Button>
-      <Button layoutX="220.0" layoutY="77.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="139.0" styleClass="button-style" stylesheets="@../../../style.css" text="Fight">
+      <Button layoutX="220.0" layoutY="77.0" mnemonicParsing="false" onAction="#goFight" prefHeight="75.0" prefWidth="139.0" styleClass="button-style" stylesheets="@../../../style.css" text="Fight">
          <effect>
-            <DropShadow spread="0.66" />
+            <DropShadow spread="0.54" />
          </effect>
       </Button>
+      <Label fx:id="goldOverview" alignment="CENTER" layoutX="428.0" layoutY="474.0" prefHeight="33.0" prefWidth="103.0" styleClass="title3" stylesheets="@../../../style.css" text="0">
+         <effect>
+            <DropShadow spread="0.6" />
+         </effect>
+      </Label>
    </children>
 </AnchorPane>

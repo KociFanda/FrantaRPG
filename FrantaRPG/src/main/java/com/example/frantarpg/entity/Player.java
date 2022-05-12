@@ -74,16 +74,27 @@ public class Player{
         BufferedReader br = new BufferedReader(new FileReader("save.txt"));
         String[] pomocnaPoleOrna_a_ValecnaKamo;
         String docasnyString = br.readLine();
-        pomocnaPoleOrna_a_ValecnaKamo = docasnyString.split(" ", 7);
+        if (docasnyString == null){
+            this.name = " ";
+            this.player_class = " ";
+            this.hp =  0 ;
+            this.strength = 0 ;
+            this.agility = 0;
+            this.inteligence = 0;
+            this.gold = 0;
+        }
+        else {
+            pomocnaPoleOrna_a_ValecnaKamo = docasnyString.split(" ", 7);
+            this.name = pomocnaPoleOrna_a_ValecnaKamo[0];
+            this.player_class = pomocnaPoleOrna_a_ValecnaKamo[1];
+            this.hp = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[2]);
+            this.strength = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[3]);
+            this.agility = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[4]);
+            this.inteligence = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[5]);
+            this.gold = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[6]);
+        }
+        }
 
-        this.name = pomocnaPoleOrna_a_ValecnaKamo[0];
-        this.player_class = pomocnaPoleOrna_a_ValecnaKamo[1];
-        this.hp = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[2]);
-        this.strength = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[3]);
-        this.agility = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[4]);
-        this.inteligence = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[5]);
-        this.gold = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[6]);
-    }
 
 
 

@@ -10,15 +10,6 @@
             -fx-stroke-width: 2px;
 
         }
-        .klass{
-            -fx-text-fill:white;
-            -fx-font-size:35px ;
-            -fx-border: 10px;
-            -fx-background-image: url("img/arrow-back.png");
-            -fx-background-color: transparent;
-            -fx-background-repeat: round ;
-            -fx-border: none;
-        }
         .button-style{
             -fx-text-fill:white;
             -fx-font-size:35px ;
@@ -27,6 +18,12 @@
             -fx-background-repeat:no-repeat;
             -fx-border: none;
         }
+         .button-style:hover{
+           -fx-text-fill:red;
+         }
+          .button-style:pressed{
+          -fx-font-size:31px;
+          }
         .button-style-overview{
             -fx-font-family: Elephant;
             -fx-text-fill:white;
@@ -72,4 +69,34 @@
             -fx-font-family:Elephant;
             -fx-font-size: 19px;
             -fx-font-weight:bold;
+        }
+
+        .text-area .scroll-bar:vertical:disabled {
+            -fx-opacity: 0;
+        }
+        .fight-small-text{
+            -fx-font-weight: bold;
+            -fx-font-family:Koulen;
+            -fx-font-size: 16px;
+            -fx-text-fill: black;
+            -fx-stroke: firebrick;
+            -fx-stroke-width: 2px;
+
+        }
+
+        .text-area {
+            -fx-background-color: rgb(255, 139, 139);
+        }
+
+        .text-area .scroll-pane {
+            -fx-background-color: transparent;
+        }
+
+        .text-area .scroll-pane .viewport{
+            -fx-background-color: transparent;
+        }
+
+
+        .text-area .scroll-pane .content{
+            -fx-background-color: transparent;
         }

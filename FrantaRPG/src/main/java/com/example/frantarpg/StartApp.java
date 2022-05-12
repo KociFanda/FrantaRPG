@@ -3,6 +3,8 @@ package com.example.frantarpg;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -13,7 +15,7 @@ public class StartApp extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader(StartApp.class.getResource("main-menu.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 720, 480);
-        stage.setTitle("Main menu");
+        stage.setTitle("Main menu");;
         stage.setScene(scene);
         stage.setMinHeight(480);
         stage.setMinWidth(720);

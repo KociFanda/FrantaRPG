@@ -27,6 +27,7 @@ public class Overview implements Initializable {
     public ImageView playerImage;
     public Label playerName;
     public TextArea playerStats;
+    public Label goldOverview;
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -64,6 +65,7 @@ public class Overview implements Initializable {
 
                 playerImage.setImage(image);
                 playerName.setText(player.getName());
+                goldOverview.setText(String.valueOf(player.getGold()));
                 playerStats.setText(String.valueOf(
                         "HP: " + player.getHp() + "\n" +
                                 "Strength: " + player.getStrength() + "\n" +
@@ -81,11 +83,13 @@ public class Overview implements Initializable {
 
                 playerImage.setImage(image);
                 playerName.setText(player.getName());
+                goldOverview.setText(String.valueOf(player.getGold()));
                 playerStats.setText(String.valueOf(
                         "HP: " + player.getHp() + "\n" +
                                 "Strength: " + player.getStrength() + "\n" +
                                 "Agility: " + player.getAgility() + "\n" +
                                 "Inteligence:" + player.getInteligence()));
+
                 break;
             case "Tyler1":
                 System.out.println("Vidíš Tyler1");
@@ -98,6 +102,7 @@ public class Overview implements Initializable {
 
                 playerImage.setImage(image);
                 playerName.setText(player.getName());
+                goldOverview.setText(String.valueOf(player.getGold()));
                 playerStats.setText(String.valueOf(
                         "HP: " + player.getHp() + "\n" +
                                 "Strength: " + player.getStrength() + "\n" +
@@ -118,6 +123,20 @@ public class Overview implements Initializable {
         stage.setMaxWidth(720);
         stage.setMinHeight(480);
         stage.setMinWidth(720);
+        stage.setResizable(true);
+        stage.show();
+    }
+
+    public void goFight(ActionEvent actionEvent) throws IOException {
+        System.out.println("I am starting the fight");
+        root = FXMLLoader.load(getClass().getResource("fight.fxml"));
+        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setMaxHeight(535);
+        stage.setMaxWidth(855);
+        stage.setMinHeight(535);
+        stage.setMinWidth(855);
         stage.setResizable(true);
         stage.show();
     }

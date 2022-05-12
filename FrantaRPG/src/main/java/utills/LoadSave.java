@@ -1,13 +1,20 @@
 package utills;
 
 import com.example.frantarpg.entity.Player;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Set;
 
 public class LoadSave {
-    public static void load(){
 
+    public static void load(){
         try {
             BufferedReader br = new BufferedReader(new FileReader("save.txt"));
             Player player= new Player();
@@ -45,7 +52,6 @@ public class LoadSave {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
 
     }
 }

@@ -20,7 +20,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
-import java.util.EventListener;
 import java.util.ResourceBundle;
 
 public class CharacterCreation implements Initializable {
@@ -38,7 +37,7 @@ public class CharacterCreation implements Initializable {
     public ImageView imageView;
     public String ChossenCharacter = "no";
     public Player player;
-    public Object object;
+
 public void tyler1Chosen(ActionEvent event){
     questionMark.setVisible(false);
     characterMainImageTyler.setVisible(true);
@@ -82,9 +81,18 @@ public void tyler1Chosen(ActionEvent event){
         ChossenCharacter = "mage";
     }
 
-    public void goBack(ActionEvent event) throws IOException {
+    public void goBack(MouseEvent event) throws IOException {
         System.out.println("I am going back to the menu");
-        utills.CreateWindow.Create(event, object = getClass().getResource("main-menu.fxml"), 720 , 480, true  );
+        root = FXMLLoader.load(getClass().getResource("main-menu.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setMaxHeight(480);
+        stage.setMaxWidth(720);
+        stage.setMinHeight(480);
+        stage.setMinWidth(720);
+        stage.setResizable(true);
+        stage.show();
     }
 
     @Override
@@ -116,6 +124,7 @@ public void tyler1Chosen(ActionEvent event){
         Agility= 5 ;
         Inteligence = 1;
         Gold = 50;
+         ChossenCharacter = "no";
 
         }
      if(ChossenCharacter == "mage"){
@@ -127,6 +136,7 @@ public void tyler1Chosen(ActionEvent event){
          Agility= 6 ;
          Inteligence = 10;
          Gold = 70;
+         ChossenCharacter = "no";
     }
      if(ChossenCharacter == "archer"){
          name = ChosenName.getText();
@@ -137,11 +147,12 @@ public void tyler1Chosen(ActionEvent event){
          Agility= 10 ;
          Inteligence = 4;
          Gold = 20;
+         ChossenCharacter = "no";
      }
      if(name == "" ){ name = "Bezejmeny" ;}
 
         utills.Save.save( name,  ClassNAME, HP,  Strength,  Agility,  Inteligence,  Gold);
-        }
+
 
 
 
@@ -156,7 +167,7 @@ public void tyler1Chosen(ActionEvent event){
         stage.setMinWidth(805);
         stage.setResizable(true);
         stage.show();
-
+        }
 }
 
 }

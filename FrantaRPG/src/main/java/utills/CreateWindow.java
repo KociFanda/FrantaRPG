@@ -14,18 +14,11 @@ public class CreateWindow {
     private static Stage stage;
     private static Scene scene;
     private static Parent root;
-
-    public static void Create(ActionEvent event, Object object, int width, int height, boolean resizable) throws IOException {
-
-        root = FXMLLoader.load((URL) object);
+    public static void Create(Object source, ActionEvent event) throws IOException {
+        root = FXMLLoader.load((URL) source);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
-        stage.setMaxHeight(height);
-        stage.setMaxWidth(width);
-        stage.setMinHeight(height);
-        stage.setMinWidth(width);
-        stage.setResizable(true);
         stage.show();
     }
 }

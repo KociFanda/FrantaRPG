@@ -1,0 +1,24 @@
+
+        .menu-background{
+            -fx-background-image: url(menu.jpg);
+            -fx-background-repeat: stretch;
+            -fx-background-position: center center;
+        }
+        .title{
+            -fx-underline:true;
+            -fx-font-family:Elephant;
+            -fx-font-size: 40px;
+            -fx-text-fill: white;
+            -fx-stroke: firebrick;
+            -fx-stroke-width: 2px;
+            -fx-underline: true;
+        }
+        .button-style{
+            -fx-text-fill:white;
+            -fx-font-size:20px ;
+            -fx-border: 10px;
+            -fx-background-color: Transparent;
+            -fx-background-repeat:no-repeat;
+            -fx-border-color:white;
+            /*-fx-border-width: 0 0 3 0;*/
+        }

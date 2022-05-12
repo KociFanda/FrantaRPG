@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.Fight">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="898.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/fightBackground.jpg" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="fightTextArea" editable="false" layoutX="248.0" layoutY="316.0" maxHeight="-Infinity" maxWidth="-Infinity" prefColumnCount="0" prefHeight="160.0" prefWidth="355.0" styleClass="fight-small-text" stylesheets="@../../../style.css" />
+      <ImageView fx:id="playerImage" fitHeight="177.0" fitWidth="157.0" layoutX="35.0" layoutY="100.0" pickOnBounds="true" />
+      <ImageView fx:id="enemyrImage" fitHeight="177.0" fitWidth="163.0" layoutX="656.0" layoutY="100.0" pickOnBounds="true" />
+      <Label fx:id="playerName" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="24.0" prefHeight="33.0" prefWidth="177.0" styleClass="title3" stylesheets="@../../../style.css" text="NoData" />
+      <Label fx:id="enemyName" alignment="CENTER" contentDisplay="CENTER" layoutX="646.0" layoutY="24.0" prefHeight="33.0" prefWidth="177.0" styleClass="title3" stylesheets="@../../../style.css" text="NoData" />
+      <Button layoutX="42.0" layoutY="345.0" mnemonicParsing="false" styleClass="button-style" stylesheets="@../../../style.css" text="Attack">
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" spread="0.57" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

@@ -54,8 +54,21 @@ public class MainMenu implements Initializable {
     }
 
 
-    public void LoadGame(ActionEvent actionEvent) {
+    public void LoadGame(ActionEvent actionEvent) throws IOException {
         utills.LoadSave.load();
+
+
+        System.out.println("\n" + "***************" + "Loading game" + "***************");
+        root = FXMLLoader.load(getClass().getResource("overview.fxml"));
+        stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setMaxHeight(625);
+        stage.setMaxWidth(805);
+        stage.setMinHeight(625);
+        stage.setMinWidth(805);
+        stage.setResizable(true);
+        stage.show();
     }
 
     public void END(ActionEvent actionEvent) {

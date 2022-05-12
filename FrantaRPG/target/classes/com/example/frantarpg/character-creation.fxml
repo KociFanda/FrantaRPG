@@ -106,15 +106,27 @@
             </ImageView>
             <ImageView fitHeight="255.0" fitWidth="318.0" layoutX="27.0" layoutY="181.0" pickOnBounds="true">
                <image>
-                  <Image url="@../../../img/frame-character-creation.png" />
+                  <Image url="@../../../img/frame.png" />
                </image>
             </ImageView>
+            <ImageView fitHeight="64.0" fitWidth="141.0" layoutX="40.0" layoutY="459.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/arrow-back.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="79.0" layoutY="446.0" onMouseClicked="#goBack" text="Back" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" spread="0.11" />
+               </effect>
+            </Label>
             <Label fx:id="warning" layoutX="347.0" layoutY="410.0" text="! Choose your class !" textFill="RED" visible="false">
                <font>
                   <Font name="Elephant" size="27.0" />
                </font>
             </Label>
-            <Button layoutX="11.0" layoutY="462.0" mnemonicParsing="false" onAction="#goBack" prefHeight="75.0" prefWidth="108.0" styleClass="klass" stylesheets="@../../../style.css" />
          </children>
       </Pane>
 
