@@ -12,8 +12,8 @@
       <Image url="@../../../img/main-menu.jpg" />
    </ImageView>
 
-   <StackPane prefHeight="99.0" prefWidth="720.0" AnchorPane.bottomAnchor="381.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <Label prefHeight="99.0" prefWidth="397.0" styleClass="title" stylesheets="@../../../style.css" text="Franta RPG">
+   <StackPane layoutX="9.0" prefHeight="94.0" prefWidth="702.0" AnchorPane.bottomAnchor="386.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="0.0">
+      <Label prefHeight="99.0" prefWidth="298.0" styleClass="title" stylesheets="@../../../style.css" text="Franta RPG">
          <effect>
             <DropShadow spread="0.9" />
          </effect>

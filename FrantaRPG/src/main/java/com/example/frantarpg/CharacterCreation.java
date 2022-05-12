@@ -36,6 +36,7 @@ public class CharacterCreation implements Initializable {
     public AnchorPane mainLayout;
     public ImageView imageView;
     public String ChossenCharacter = "no";
+    Object object;
     public Player player;
 
 public void tyler1Chosen(ActionEvent event){
@@ -81,19 +82,6 @@ public void tyler1Chosen(ActionEvent event){
         ChossenCharacter = "mage";
     }
 
-    public void goBack(MouseEvent event) throws IOException {
-        System.out.println("I am going back to the menu");
-        root = FXMLLoader.load(getClass().getResource("main-menu.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setMaxHeight(480);
-        stage.setMaxWidth(720);
-        stage.setMinHeight(480);
-        stage.setMinWidth(720);
-        stage.setResizable(true);
-        stage.show();
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -149,7 +137,7 @@ public void tyler1Chosen(ActionEvent event){
          Gold = 20;
          ChossenCharacter = "no";
      }
-     if(name == "" ){ name = "Bezejmeny" ;}
+     if(name == "" ){ name = "NoName" ;}
 
         utills.Save.save( name,  ClassNAME, HP,  Strength,  Agility,  Inteligence,  Gold);
 
@@ -157,17 +145,15 @@ public void tyler1Chosen(ActionEvent event){
 
 
         System.out.println("\n" + "***************" + "Creating new game" + "***************");
-        root = FXMLLoader.load(getClass().getResource("overview.fxml"));
-        stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setMaxHeight(625);
-        stage.setMaxWidth(805);
-        stage.setMinHeight(625);
-        stage.setMinWidth(805);
-        stage.setResizable(true);
-        stage.show();
+            utills.CreateWindow.Create(actionEvent, object = getClass().getResource("overview.fxml"),
+                    805 , 625, true  );
+
         }
 }
 
+    public void goBack(ActionEvent actionEvent) throws IOException {
+        System.out.println("I am going back to the menu");
+        utills.CreateWindow.Create(actionEvent, object = getClass().getResource("main-menu.fxml"),
+                720 , 480, true  );
+    }
 }

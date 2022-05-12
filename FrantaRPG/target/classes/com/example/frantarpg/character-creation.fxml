@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="mainLayout" focusTraversable="true" prefHeight="580.0" prefWidth="820.0" styleClass="character-creation-background" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.CharacterCreation">
+<AnchorPane fx:id="mainLayout" focusTraversable="true" prefHeight="580.0" prefWidth="820.0" styleClass="character-creation-background" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.CharacterCreation">
    <children>
       <ImageView fx:id="imageView" fitHeight="580.0" fitWidth="820.0" layoutY="4.0" nodeOrientation="INHERIT" pickOnBounds="true" smooth="false">
          <image>
@@ -109,19 +109,7 @@
                   <Image url="@../../../img/frame.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="141.0" layoutX="40.0" layoutY="459.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../img/arrow-back.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="79.0" layoutY="446.0" onMouseClicked="#goBack" text="Back" textFill="WHITE">
-               <font>
-                  <Font size="17.0" />
-               </font>
-               <effect>
-                  <DropShadow blurType="TWO_PASS_BOX" spread="0.11" />
-               </effect>
-            </Label>
+            <Button layoutX="13.0" layoutY="440.0" mnemonicParsing="false" onAction="#goBack" prefHeight="75.0" prefWidth="108.0" styleClass="klass" />
             <Label fx:id="warning" layoutX="347.0" layoutY="410.0" text="! Choose your class !" textFill="RED" visible="false">
                <font>
                   <Font name="Elephant" size="27.0" />

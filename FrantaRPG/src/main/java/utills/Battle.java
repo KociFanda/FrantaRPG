@@ -3,10 +3,15 @@ package utills;
 import com.example.frantarpg.entity.Enemy;
 import com.example.frantarpg.entity.Player;
 
+import java.util.Random;
+
 public class Battle {
 
     public static void playerAttack(int playerDMG, int enemyHP, Enemy enemy){
+        System.out.println("enemy hp is:" + enemyHP);
         enemyHP = enemyHP - playerDMG;
+        System.out.println("player dmg is:" + playerDMG);
+        System.out.println("enemy hp is:" + enemyHP);
         enemy.setHp(enemyHP);
     }
 
@@ -17,23 +22,24 @@ public class Battle {
         player.setHp(playerHP);
 
     }
-
-    public static void enemyAttack(int playerHP, int enemyDMG, Player player){
-        playerHP = playerHP - enemyDMG;
-
-        player.setHp(playerHP);
-
-    }
-    public static void enemyDefend(int enemyHP, int playerDMG, String playerChoice, Enemy enemy) {
-        if (playerChoice == "attack"){
-            enemyHP = enemyHP - (playerDMG/2);
+    public  static void enemyResponse(int playerHP,int playerDMG, int enemyDMG,  int enemyHP, Enemy enemy, Player player, String playerChoice ){
+        Random random= new Random();
+        int response = random.nextInt(2);
+        switch (response){
+            //Nepřítel zaútočí
+            case 0:
+                playerHP = playerHP - enemyDMG;
+                player.setHp(playerHP);
+                break;
+                //Nepřítel se brání
+            case 1:
+                if (playerChoice == "attack"){
+                    enemyHP = enemyHP + (playerDMG/2);
+                }
+                enemy.setHp(enemyHP);
         }
-        enemy.setHp(enemyHP);
-
 
     }
-
-
 
 
 

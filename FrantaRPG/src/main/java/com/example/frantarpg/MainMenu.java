@@ -26,6 +26,7 @@ public class MainMenu implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    Object object;
     Player player;
 
     @FXML
@@ -37,38 +38,16 @@ public class MainMenu implements Initializable {
     }
 
     public void onNewGameClick(ActionEvent event) throws IOException {
-
-
         System.out.println("Creating new window ;] :]");
-        root = FXMLLoader.load(getClass().getResource("character-creation.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);;
-        stage.setScene(scene);
-        stage.setMaximized(false);
-        stage.setMinHeight(680);
-        stage.setMinWidth(920);
-        stage.setResizable(false);
-        stage.show();
-
-
+        utills.CreateWindow.Create(event, object = getClass().getResource("character-creation.fxml"),
+                920 , 680, false  );
     }
-
 
     public void LoadGame(ActionEvent actionEvent) throws IOException {
         utills.LoadSave.load();
-
-
         System.out.println("\n" + "***************" + "Loading game" + "***************");
-        root = FXMLLoader.load(getClass().getResource("overview.fxml"));
-        stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setMaxHeight(625);
-        stage.setMaxWidth(805);
-        stage.setMinHeight(625);
-        stage.setMinWidth(805);
-        stage.setResizable(true);
-        stage.show();
+        utills.CreateWindow.Create(actionEvent, object = getClass().getResource("overview.fxml"),
+                805 , 625, true  );
     }
 
     public void END(ActionEvent actionEvent) {
