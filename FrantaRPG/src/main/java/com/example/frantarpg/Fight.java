@@ -7,13 +7,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-
+import utills.IsDead;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
+
 
 public class Fight implements Initializable {
     public TextArea fightTextArea;
@@ -36,7 +37,7 @@ public class Fight implements Initializable {
             throw new RuntimeException(e);
         }
     }
-    Enemy enemy = new Enemy("Orc", 100,10);
+    Enemy enemy = new Enemy("Orc", 100,11);
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
         FileInputStream inputstream = null;
@@ -101,43 +102,13 @@ public class Fight implements Initializable {
         playerChoice="attack";
         utills.Battle.playerAttack(player.getStrength(),enemy.getHp(),enemy);
         utills.Battle.enemyResponse(player.getHp(),player.getStrength(),enemy.getDmg(),enemy.getHp(),enemy,player,playerChoice);
-
+//Aktualizace životů
         playerHP.setText(String.valueOf(player.getHp()));
+        playerHPbar.setProgress(Double.valueOf(player.getHp())/100);
         enemyHP.setText(String.valueOf(enemy.getHp()));
-
-
-        if (enemy.getHp() <= 0){
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("END");
-            alert.setContentText("You have WON. What a chad");
-
-            Optional<ButtonType> result = alert.showAndWait();
-            if (result.get() == ButtonType.OK){
-                System.out.println("I am going back to the overview");
-                utills.CreateWindow.Create(actionEvent, object = getClass().getResource("overview.fxml"),
-                        805 , 625, true  );
-            } else {
-                System.out.println("I am going back to the overview");
-                utills.CreateWindow.Create(actionEvent, object = getClass().getResource("overview.fxml"),
-                        805 , 625, true  );
-            }
-        }
-        if (player.getHp() <= 0) {
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("THE END");
-            alert.setContentText("You have lost to the orc. Comeback stronger");
-
-            Optional<ButtonType> result = alert.showAndWait();
-            if (result.get() == ButtonType.OK){
-                System.out.println("I am going back to the overview");
-                utills.CreateWindow.Create(actionEvent, object = getClass().getResource("overview.fxml"),
-                        805 , 625, true  );
-            } else {
-                System.out.println("I am going back to the overview");
-                utills.CreateWindow.Create(actionEvent, object = getClass().getResource("overview.fxml"),
-                        805 , 625, true  );
-            }
-        }
+        enemyHPbar.setProgress(Double.valueOf(enemy.getHp())/100);
+        object = getClass().getResource("overview.fxml");
+        utills.IsDead.check(player.getHp(),enemy.getHp(), actionEvent, object);
     }
 
 }

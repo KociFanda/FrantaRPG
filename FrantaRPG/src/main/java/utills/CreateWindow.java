@@ -25,7 +25,7 @@ public class CreateWindow {
         stage.setMaxWidth(width);
         stage.setMinHeight(height);
         stage.setMinWidth(width);
-        stage.setResizable(true);
+        stage.setResizable(resizable);
         stage.show();
     }
 }
