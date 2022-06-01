@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.Fight">
+<AnchorPane prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frantarpg.Fight">
    <children>
       <ImageView fitHeight="500.0" fitWidth="898.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -18,7 +18,7 @@
       <ImageView fx:id="enemyImage" fitHeight="177.0" fitWidth="163.0" layoutX="656.0" layoutY="100.0" pickOnBounds="true" />
       <Label fx:id="playerName" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="24.0" prefHeight="33.0" prefWidth="177.0" styleClass="title3" stylesheets="@../../../style.css" text="NoData" />
       <Label fx:id="enemyName" alignment="CENTER" contentDisplay="CENTER" layoutX="646.0" layoutY="24.0" prefHeight="33.0" prefWidth="177.0" styleClass="title3" stylesheets="@../../../style.css" text="NoData" />
-      <Button layoutX="42.0" layoutY="345.0" mnemonicParsing="false" onAction="#attack" styleClass="button-style" stylesheets="@../../../style.css" text="Attack">
+      <Button layoutY="333.0" mnemonicParsing="false" onAction="#attack" prefHeight="51.0" prefWidth="157.0" styleClass="button-style" stylesheets="@../../../style.css" text="Attack">
          <effect>
             <DropShadow blurType="TWO_PASS_BOX" spread="0.57" />
          </effect>
@@ -35,5 +35,13 @@
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
+      <Button layoutX="3.0" layoutY="401.0" mnemonicParsing="false" onAction="#defend" styleClass="button-style" stylesheets="@../../../style.css" text="Defend">
+         <effect>
+            <DropShadow spread="0.53" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

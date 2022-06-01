@@ -1,5 +1,7 @@
 package com.example.frantarpg.entity;
 
+import javafx.scene.image.Image;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

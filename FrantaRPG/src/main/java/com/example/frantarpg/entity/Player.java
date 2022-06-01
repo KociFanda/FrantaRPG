@@ -1,11 +1,10 @@
 package com.example.frantarpg.entity;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import javafx.scene.image.Image;
 
-public class Player{
+import java.io.*;
+
+public class Player {
     private String name;
     private String player_class;
     private int strength;
@@ -14,6 +13,17 @@ public class Player{
     private int hp;
     private int gold;
 
+    private Image player_avatar;
+    FileInputStream inputstream = null;
+    Image image;
+
+    public Image getPlayer_avatar() {
+        return player_avatar;
+    }
+
+    public void setPlayer_avatar(Image player_avatar) {
+        this.player_avatar = player_avatar;
+    }
 
     public String getName() {
         return name;
@@ -30,6 +40,7 @@ public class Player{
     public void setPlayer_class(String player_class) {
         this.player_class = player_class;
     }
+
     public int getStrength() {
         return strength;
     }
@@ -74,16 +85,15 @@ public class Player{
         BufferedReader br = new BufferedReader(new FileReader("save.txt"));
         String[] pomocnaPoleOrna_a_ValecnaKamo;
         String docasnyString = br.readLine();
-        if (docasnyString == null){
+        if (docasnyString == null) {
             this.name = " ";
             this.player_class = " ";
-            this.hp =  0 ;
-            this.strength = 0 ;
+            this.hp = 0;
+            this.strength = 0;
             this.agility = 0;
             this.inteligence = 0;
             this.gold = 0;
-        }
-        else {
+        } else {
             pomocnaPoleOrna_a_ValecnaKamo = docasnyString.split(" ", 7);
             this.name = pomocnaPoleOrna_a_ValecnaKamo[0];
             this.player_class = pomocnaPoleOrna_a_ValecnaKamo[1];
@@ -92,11 +102,25 @@ public class Player{
             this.agility = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[4]);
             this.inteligence = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[5]);
             this.gold = Integer.parseInt(pomocnaPoleOrna_a_ValecnaKamo[6]);
+            switch (getPlayer_class()) {
+                case "Archer":
+                    inputstream = new FileInputStream("FrantaRPG/src/main/resources/img/archer-main-image.jpg");
+                    image = new Image(inputstream);
+                    this.player_avatar = image;
+                    break;
+                case "Tyler1":
+                    inputstream = new FileInputStream("FrantaRPG/src/main/resources/img/tyler1-main-image.jpg");
+                    image = new Image(inputstream);
+                    this.player_avatar = image;
+                    break;
+                case "Mage":
+                    inputstream = new FileInputStream("FrantaRPG/src/main/resources/img/mage-main-image.jpg");
+                    image = new Image(inputstream);
+                    this.player_avatar = image;
+                    break;
+            }
         }
-        }
-
-
-
+    }
 
 
 }
