@@ -46,10 +46,10 @@ public void tyler1Chosen(ActionEvent event){
     characterMainImageMage.setVisible(false);
     classInfo.setText(
            "Class name:Tyler1\n" +
-           "HP:150\n" +
-           "STR:10\n" +
+           "HP:100\n" +
+           "STR:12\n" +
            "AGI:5\n" +
-           "INT:5\n" );
+           "INT:1\n" );
         ChossenCharacter = "tyler1";
     }
 
@@ -61,7 +61,7 @@ public void tyler1Chosen(ActionEvent event){
         characterMainImageMage.setVisible(false);
         classInfo.setText(
                 "Class name:Archer\n" +
-                        "HP:100\n" +
+                        "HP:70\n" +
                         "STR:5\n" +
                         "AGI:10\n" +
                         "INT:5\n" );
@@ -75,7 +75,7 @@ public void tyler1Chosen(ActionEvent event){
         characterMainImageTyler.setVisible(false);
         classInfo.setText(
                 "Class name:Mage\n" +
-                        "HP:80\n" +
+                        "HP:70\n" +
                         "STR:5\n" +
                         "AGI:5\n" +
                         "INT:10" );
@@ -121,7 +121,7 @@ public void tyler1Chosen(ActionEvent event){
          ClassNAME = "Mage";
          HP = 70;
          Strength= 5;
-         Agility= 6 ;
+         Agility= 5 ;
          Inteligence = 10;
          Gold = 70;
          ChossenCharacter = "no";
@@ -131,9 +131,9 @@ public void tyler1Chosen(ActionEvent event){
          name = name.replace(" ", "");
          ClassNAME = "Archer";
          HP = 70;
-         Strength= 4;
+         Strength= 5;
          Agility= 10 ;
-         Inteligence = 4;
+         Inteligence = 5;
          Gold = 20;
          ChossenCharacter = "no";
      }

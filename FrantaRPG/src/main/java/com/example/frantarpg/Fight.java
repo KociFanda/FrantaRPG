@@ -26,6 +26,7 @@ public class Fight implements Initializable {
     public ProgressBar playerHPbar;
     public Label enemyHP;
     public Label playerHP;
+
     Object object;
     String playerChoice;
     String enemyChoice;
@@ -37,8 +38,10 @@ public class Fight implements Initializable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
+    }public int maxPlayerHP = player.getHp();
     Enemy enemy = new Enemy("Orc", 100,11);
+    public int maxEnemyHP = enemy.getHp();
+
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
         FileInputStream inputstream = null;
@@ -94,7 +97,6 @@ public class Fight implements Initializable {
         image2 = new Image(inputstream);
         enemyImage.setImage(image2);
         enemyName.setText(enemy.getName());
-
         playerHP.setText(String.valueOf(player.getHp()));
         enemyHP.setText(String.valueOf(enemy.getHp()));
     }
@@ -105,9 +107,9 @@ public class Fight implements Initializable {
         utills.Battle.enemyResponse(player.getHp(),player.getStrength(),enemy.getDmg(),enemy.getHp(),enemy,player,playerChoice);
 //Aktualizace životů
         playerHP.setText(String.valueOf(player.getHp()));
-        playerHPbar.setProgress(Double.valueOf(player.getHp())/100);
+        playerHPbar.setProgress(Double.valueOf(player.getHp())/maxPlayerHP);
         enemyHP.setText(String.valueOf(enemy.getHp()));
-        enemyHPbar.setProgress(Double.valueOf(enemy.getHp())/100);
+        enemyHPbar.setProgress(Double.valueOf(enemy.getHp())/maxEnemyHP);
         object = getClass().getResource("overview.fxml");
         //kontrola jestli někdo umřel
         utills.IsDead.check(player.getHp(),enemy.getHp(), actionEvent, object);
@@ -121,9 +123,9 @@ public class Fight implements Initializable {
         utills.Battle.playerDefend(player.getHp(),enemy.getDmg(),player);
         //Aktualizace životů
         playerHP.setText(String.valueOf(player.getHp()));
-        playerHPbar.setProgress(Double.valueOf(player.getHp())/100);
+        playerHPbar.setProgress(Double.valueOf(player.getHp())/maxPlayerHP);
         enemyHP.setText(String.valueOf(enemy.getHp()));
-        enemyHPbar.setProgress(Double.valueOf(enemy.getHp())/100);
+        enemyHPbar.setProgress(Double.valueOf(enemy.getHp())/maxEnemyHP);
         object = getClass().getResource("overview.fxml");
         //kontrola jestli někdo umřel
         utills.IsDead.check(player.getHp(),enemy.getHp(), actionEvent, object);
