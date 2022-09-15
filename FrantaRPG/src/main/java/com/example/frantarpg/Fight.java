@@ -29,7 +29,7 @@ public class Fight implements Initializable {
 
     Object object;
     String playerChoice;
-    //Tvorba hráče a nepřítele
+    //Tvorba hráče a nepřítel
     Player player;
     {
         try {
